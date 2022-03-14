@@ -3,7 +3,8 @@ import "./Home.css";
 
 class Home extends Component {
   render(){
-    <section data-scroll-section>
+    return(
+      <section data-scroll-section>
       <div className="container p-4 pb-4">
         <div className="home_texts container-md">
           <h1 className="home_title row text-center">
@@ -14,6 +15,7 @@ class Home extends Component {
         </div>
       </div>
     </section>
+    )
   }
 }
 

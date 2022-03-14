@@ -3,7 +3,8 @@ import "./Contact.css";
 
 class Contact extends Component {
   render(){
-    <section data-scroll-section>
+    return(
+      <section data-scroll-section>
       <div className="secc-contact container p-4 ">
         <div className="contact text-center" id="contact">
           <div className="contact_text">
@@ -50,6 +51,7 @@ class Contact extends Component {
         </div>
       </div>
     </section>
+    )
   }
 }
 export default Contact
