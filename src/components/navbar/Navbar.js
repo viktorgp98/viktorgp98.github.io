@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 import './Navbar.css'
 import pdf from '../documents/CV - Viktor.pdf'
 
-export default function Navbar() {
-  return (
+class Navbar extends Component {
+  render(){
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div className="container">
         <a className="navbar-brand fw-bold fst-italic" href="/">
@@ -51,5 +51,5 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
-  );
+  }
 }

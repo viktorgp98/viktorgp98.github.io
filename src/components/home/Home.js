@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Home.css";
 
-export default function Home() {
-  return (
+class Home extends Component {
+  render(){
     <section data-scroll-section>
       <div className="container p-4 pb-4">
         <div className="home_texts container-md">
@@ -14,5 +14,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-  );
+  }
 }

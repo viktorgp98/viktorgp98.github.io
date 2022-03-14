@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import './About.css'
 
-export default function About() {
-  return (
+class About extends Component {
+  render(){
     <section data-scroll-section>
       <div class="container p-4">
         <div class="row justify-content-start about">
@@ -26,5 +26,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  );
+  }
 }

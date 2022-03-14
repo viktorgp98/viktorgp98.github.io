@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Contact.css";
 
-export default function Contact() {
-  return (
+class Contact extends Component {
+  render(){
     <section data-scroll-section>
       <div className="secc-contact container p-4 ">
         <div className="contact text-center" id="contact">
@@ -50,5 +50,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  );
+  }
 }
