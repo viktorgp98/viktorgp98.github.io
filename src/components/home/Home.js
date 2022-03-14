@@ -16,3 +16,5 @@ class Home extends Component {
     </section>
   }
 }
+
+export default Home

@@ -11,3 +11,5 @@ class Project extends Component {
     </section>
   }
 }
+
+export default Project
