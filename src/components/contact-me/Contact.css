@@ -1,0 +1,19 @@
+.contact_email{
+    color: var(--gris-max);
+    font-size: 4.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+.contact_email:hover{
+    color:var(--gris-oscuro);
+}
+.contact_availability{
+    font-weight: 400;
+    letter-spacing: .24rem;
+    font-size: 1.4rem;
+}
+.contact_availability>span{
+    /* color: #019872; */
+    color: rgb(199, 16, 16);
+}
