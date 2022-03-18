@@ -3,19 +3,72 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--blanco);
 }
-:root{
+:root {
   /* --gris-max: #595959; */
-  --gris-max:#222326;
-  --gris-oscuro:#33353a;
-  --gris-osc:#8C8C8C;
-  --gris-mid:#BFBFBF;
-  --gris-claro:#D9D9D9;
-  --blanco:#F2F2F2;
+  --gris-max: #222326;
+  --gris-oscuro: #33353a;
+  --gris-osc: #8c8c8c;
+  --gris-mid: #bfbfbf;
+  --gris-claro: #d9d9d9;
+  --blanco: #f2f2f2;
 }
-*{
-  font-family: 'Clash Display', sans-serif !important;
+* {
+  font-family: "Clash Display", sans-serif !important;
 }
 
-.title_section{
-  font-size: 6em !important;
+
+.title_section {
+  font-size: 5em !important;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+
+/* locomotive */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging,
+html.has-scroll-dragging * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 50vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+}
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color:#000;
+  width: 7px;
+  opacity: .5;
+  border-radius: 10px;
+  margin:2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }

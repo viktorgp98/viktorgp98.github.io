@@ -1,3 +1,6 @@
+.home{
+    position: relative;
+}
 .home_title{
     font-size: 9rem;
     line-height: 9rem;
@@ -5,7 +8,7 @@
 }
 .home_subtitle{
     color: #019872;
-    font-size: 3.3rem;
+    font-size: 2.3rem;
     letter-spacing: .36rem;
     font-weight: 300;
 }

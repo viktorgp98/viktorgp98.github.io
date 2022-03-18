@@ -4,9 +4,9 @@ import "./Contact.css";
 class Contact extends Component {
   render(){
     return(
-      <section data-scroll-section>
+      <section data-scroll-section id="contact" className="contact">
       <div className="secc-contact container p-4 ">
-        <div className="contact text-center" id="contact">
+        <div className="contact text-center">
           <div className="contact_text">
             <a className="contact_email" href="mailto:viktor.gonzalezp98@gmail.com">
               {" "}
