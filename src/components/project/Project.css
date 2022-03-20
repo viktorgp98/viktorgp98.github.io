@@ -1,0 +1,9 @@
+.proyect_title{
+    color:var(--gris-claro);
+}
+.proyect_description{
+    color: var(--gris-mid);
+}
+.proyect_link{
+    color:var(--gris-mid);
+}

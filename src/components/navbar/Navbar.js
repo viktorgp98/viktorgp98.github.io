@@ -24,7 +24,7 @@ class Navbar extends Component {
         <div className="collapse navbar-collapse" id="navbar">
           <div className="navbar-nav ms-auto">
             <div className="nav-item">
-              <a className="nav-link" aria-current="page" href="/" data-scroll-to>
+              <a className="nav-link" aria-current="page" href="/" >
                 Inicio
               </a>
             </div>
