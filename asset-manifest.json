@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.a5de273b.css",
+    "main.css": "/static/css/main.6227a771.css",
     "main.js": "/static/js/main.cd53c5d4.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/www.ntwk.cl.png": "/static/media/www.ntwk.cl.f07ca20eedcab4ec3eb0.png",
@@ -12,12 +12,12 @@
     "static/media/gerosltda.cl-preview.png": "/static/media/gerosltda.cl-preview.b330c7e78c8f63db988a.png",
     "static/media/fotoviktor.jpg": "/static/media/fotoviktor.7aa3de1f40fa47de25a9.jpg",
     "index.html": "/index.html",
-    "main.a5de273b.css.map": "/static/css/main.a5de273b.css.map",
+    "main.6227a771.css.map": "/static/css/main.6227a771.css.map",
     "main.cd53c5d4.js.map": "/static/js/main.cd53c5d4.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5de273b.css",
+    "static/css/main.6227a771.css",
     "static/js/main.cd53c5d4.js"
   ]
 }
