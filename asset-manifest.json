@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.63df7e68.css",
-    "main.js": "/static/js/main.3a15bc99.js",
+    "main.js": "/static/js/main.a497b578.js",
     "static/js/787.c4e7f8f9.chunk.js": "/static/js/787.c4e7f8f9.chunk.js",
     "static/media/www.ntwk.cl.png": "/static/media/www.ntwk.cl.f07ca20eedcab4ec3eb0.png",
     "static/media/gerosltda.cl.png": "/static/media/gerosltda.cl.62248775700652341b0b.png",
     "static/media/kawell-spa.cl.png": "/static/media/kawell-spa.cl.899f7d9aa1a3d99f26b5.png",
     "static/media/kawell-spa.cl-preview.png": "/static/media/kawell-spa.cl-preview.58785069e8fdf24decfd.png",
     "static/media/www.ntwk.cl-preview.png": "/static/media/www.ntwk.cl-preview.34bce1e8c337b0a1a619.png",
-    "static/media/CV - Viktor.pdf": "/static/media/CV - Viktor.82edd230a8e5593cc4b5.pdf",
     "static/media/gerosltda.cl-preview.png": "/static/media/gerosltda.cl-preview.b330c7e78c8f63db988a.png",
+    "static/media/CV - Viktor.pdf": "/static/media/CV - Viktor.57454fb1261c02ddf8c5.pdf",
     "static/media/fotoviktor.jpg": "/static/media/fotoviktor.7aa3de1f40fa47de25a9.jpg",
     "index.html": "/index.html",
     "main.63df7e68.css.map": "/static/css/main.63df7e68.css.map",
-    "main.3a15bc99.js.map": "/static/js/main.3a15bc99.js.map",
+    "main.a497b578.js.map": "/static/js/main.a497b578.js.map",
     "787.c4e7f8f9.chunk.js.map": "/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63df7e68.css",
-    "static/js/main.3a15bc99.js"
+    "static/js/main.a497b578.js"
   ]
 }
