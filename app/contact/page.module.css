@@ -1,0 +1,158 @@
+/* desktop */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+  padding: 8rem;
+}
+.texts {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+
+.title {
+  font-size: var(--int-title-font-size);
+  letter-spacing: var(--int-title-letter-spacing);
+}
+.titleBold {
+  font-weight: bold;
+  color: var(--color-green);
+  letter-spacing: -0.17222222222222222rem;
+}
+.info {
+  font-size: 1.1vw;
+  font-weight: normal;
+  letter-spacing: 0.02rem;
+  width: 53vw;
+  margin: 2rem 3rem;
+}
+/* socials */
+.icons {
+  display: flex;
+  gap: 1.4rem;
+}
+.socials {
+  display: flex;
+  padding: 5rem;
+  gap: 1.5rem;
+}
+.socials::before {
+  content: "";
+  display: block;
+  width: 60vw;
+  height: 0.5px;
+  background: rgba(0, 0, 0, 0.2);
+  margin: -3.4vh auto;
+  left: 20vw;
+  position: absolute;
+}
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  background-color: rgb(44, 44, 44);
+}
+.icon {
+  --size: 1.8rem;
+  fill: #e8e8e8;
+  width: var(--size);
+  height: var(--size);
+}
+.socialContainer:hover svg {
+  animation: slide-in-top 0.3s both;
+}
+#linkedIn:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+#github:hover {
+  background-color: #e6edf3;
+  transition-duration: 0.3s;
+  border: 1px solid rgb(44, 44, 44);
+}
+#github:hover .icon {
+  fill: rgb(44, 44, 44);
+}
+
+.buttonMail {
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+.buttonTop {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+.buttonMail:hover .buttonTop {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.buttonMail:active .buttonTop {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+.preTitle {
+  font-size: 0.9999999rem;
+  text-transform: uppercase;
+}
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* breakpoints */
+/* tablet */
+@media screen and (min-width: 845px) and (max-width: 1023px) {
+}
+/* smartphone */
+@media screen and (max-width: 844px) {
+  .container {
+    padding: 8rem 2rem;
+    min-height: 110vh;
+  }
+  .title {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .preTitle {
+    display: flex;
+    margin: 0 auto;
+    width: 88%;
+  }
+  .buttonMail {
+    margin: 1rem;
+  }
+
+  .info {
+    font-size: var(--int-p-font-size);
+    width: 80vw;
+  }
+}

@@ -1,0 +1,120 @@
+.container {
+  padding: 10rem 0;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.banner {
+  display: flex;
+  position: absolute;
+  width: 99vw;
+  height: 100%;
+  top: 0;
+  z-index: -2;
+  flex-direction: column;
+  left: 0;
+  flex-wrap: wrap;
+}
+.img {
+  width: 50vw;
+}
+.titleContainer {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* font-size: 2.9vw;
+  letter-spacing: 0.1rem; */
+  font-size: 2.89vw;
+  letter-spacing: -0.17222222222222222rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.preTitle {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.titleBold {
+  color: rgb(50, 50, 50);
+  font-weight: 700;
+}
+.title {
+  font-weight: 100;
+  font-variation-settings: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  width: 83.7%;
+  margin: 0 auto;
+}
+.description {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 3rem 0;
+  font-size: var(--int-info-font-size);
+}
+
+.link {
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin: 2rem auto 4rem auto;
+}
+.linkUp {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+.link:hover .linkUp {
+  /* Pull the link upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.link:active .linkUp {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+/* breakpoints */
+@media screen and (max-width: 844px) {
+  .titleContainer {
+    justify-content: left;
+    width: 100%;
+  }
+  .preTitle {
+    margin: 0 2rem;
+  }
+  .title {
+    font-size: var(--int-title-font-size);
+    overflow-wrap: inherit;
+  }
+  .titleBold {
+    display: block;
+  }
+  .description {
+    font-size: var(--int-p-font-size);
+    padding: 0 2rem;
+  }
+  .img {
+    width: 90vw;
+    height: 100%;
+  }
+}

@@ -1,0 +1,127 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 7rem;
+  margin: 0 auto;
+}
+.info,
+.socialsTitle {
+  text-transform: uppercase;
+  letter-spacing: -0.061rem;
+  row-gap: 1rem;
+}
+.buttonMail {
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+.buttonTop {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+.buttonMail:hover .buttonTop {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.buttonMail:active .buttonTop {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+.infoBtn {
+  display: flex;
+  gap: 1.2rem;
+  margin: 1rem 0;
+}
+.icons {
+  display: flex;
+  gap: 1.5rem;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  background-color: rgb(44, 44, 44);
+}
+.icon {
+  --size: 1.8rem;
+  fill: #e8e8e8;
+  width: var(--size);
+  height: var(--size);
+}
+.socialContainer:hover svg {
+  animation: slide-in-top 0.3s both;
+}
+#linkedIn:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+}
+#github:hover {
+  background-color: #e6edf3;
+  transition-duration: 0.3s;
+  border: 1px solid rgb(44, 44, 44);
+}
+#github:hover .icon {
+  fill: rgb(44, 44, 44);
+}
+.watermark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* breakpoints */
+@media screen and (max-width: 844px) {
+  .container {
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: start;
+    padding: 4rem 3rem;
+  }
+  .watermark {
+    justify-content: center;
+    width: 60%;
+  }
+  .socials {
+    align-items: start;
+    gap: 0.7rem;
+  }
+}

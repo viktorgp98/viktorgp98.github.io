@@ -1,0 +1,132 @@
+/* desktop */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100vh; */
+  padding: 8rem;
+}
+.img {
+  border-radius: 5%;
+  display: flex;
+  margin: 0 auto;
+}
+.titleContainer {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  margin: 1.5rem auto;
+}
+
+.title {
+  font-size: var(--int-title-font-size);
+  letter-spacing: var(--int-title-letter-spacing);
+  display: flex;
+  align-items: center;
+  margin: 1.5rem auto;
+  letter-spacing: -0.17222222222222222rem;
+}
+.titleBold {
+  font-weight: bold;
+  color: var(--color-green);
+}
+.description {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 29.3rem);
+  gap: 2rem;
+  grid-auto-flow: row dense;
+  margin: 0 0 2rem 0;
+  font-size: var(--int-info-font-size);
+}
+.preTitle {
+  font-size: 0.9999999rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.subTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 3.5rem;
+}
+.subTitleBold {
+  font-weight: 600;
+}
+.link {
+  margin: 1rem;
+}
+.button {
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+.buttonTop {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+.button:hover .buttonTop {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.button:active .buttonTop {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+/* breakpoints */
+@media screen and (max-width: 844px) {
+  .titleContainer {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .title {
+    display: block;
+  }
+  .preTitle {
+    justify-content: start;
+    margin: 0 auto;
+    width: 70%;
+  }
+  .img {
+    width: 80%;
+    height: 100%;
+  }
+  .subTitle {
+    width: 80vw;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    row-gap: 1rem;
+    font-size: var(--int-p-font-size);
+    padding: 1rem;
+  }
+  .buttonTop {
+    padding: 1.75vw 4.5vw;
+    width: 100%;
+  }
+}

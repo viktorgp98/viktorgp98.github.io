@@ -1,0 +1,134 @@
+.container {
+  padding: 6rem;
+  min-height: 100vh;
+  padding: 4rem;
+}
+.texts {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.1rem;
+  padding: 4rem 0 2rem 0;
+}
+.title {
+  font-family: Clash Display, sans-serif;
+  font-weight: 800;
+  padding-right: 1.4rem;
+}
+.subtitle {
+  font-family: Clash Display, sans-serif;
+  font-weight: 400;
+  font-variation-settings: normal;
+  font-style: normal;
+}
+/* Slider */
+.slideLink {
+  width: 46vw;
+  height: 80vh;
+  position: relative;
+}
+.imgContainer {
+  height: 100%;
+  width: 46vw;
+  overflow: hidden;
+}
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.imgContainer:hover img {
+  transform: scale(1.11);
+}
+.slideText {
+  align-self: flex-end;
+  text-align: center;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  padding: 2rem 3rem;
+  font: inherit;
+  vertical-align: baseline;
+  text-transform: uppercase;
+}
+.slideTitle {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.4rem;
+  display: block;
+}
+.slideSubtitle {
+  color: var(--color-green);
+}
+.linkContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.link {
+  --button_radius: 0.75em;
+  --button_color: #000000;
+  --button_outline_color: #e8e8e8;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+.link_up {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+  text-transform: uppercase;
+}
+.link:hover .link_up {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+.link:active .link_up {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+/* breakpoints */
+@media screen and (max-width: 767px) {
+  .texts {
+    display: block;
+  }
+
+  .card {
+    height: 20rem;
+  }
+  .texts {
+    width: 85vw;
+    margin: 0 auto;
+  }
+  .container {
+    padding: 7rem 0;
+  }
+  .linkContainer {
+    padding: 4rem 0;
+  }
+  .info {
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: 3vw;
+    row-gap: 1rem;
+    width: 85vw;
+  }
+  .imgContainer {
+    height: 70%;
+    width: 91vw;
+    margin: 0 auto;
+  }
+}

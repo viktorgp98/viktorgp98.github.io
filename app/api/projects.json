@@ -1,0 +1,35 @@
+{"projects":[
+  {
+    "id":"1",  
+    "title": "NTWK",
+    "position": "Desarrollo sitio web",
+    "tech": "Wordpress",
+    "url": "https://www.ntwk.cl/",
+    "description": "Encargado de la maquetación del proyecto en Wordpress. Además de realizar CSS personalizado. Bajo la gestión de Bigbuda Agencia Digital",
+    "image": "https://firebasestorage.googleapis.com/v0/b/portafolioviktorgonzalez.appspot.com/o/www.ntwk.cl.png?alt=media&token=bdf216bb-2bb6-4fca-bfd5-6f1fac996bca",
+    "image_preview": "https://firebasestorage.googleapis.com/v0/b/portafolioviktorgonzalez.appspot.com/o/Ntwk_preview.webp?alt=media&token=e6546053-c491-4c31-b605-ab92b494cd40" 
+  },
+  {
+    "id":"2",
+    "title": "Geros Factoring",
+    "position": "Desarrollo landing page",
+    "tech": "HTML, CSS, JS",
+    "url": "https://www.gerosltda.cl/",
+    "description": "Encargado de la maquetación del proyecto, utilizando HTML, CSS y JS. Bajo la gestión de Bigbuda Agencia Digital",
+    "image": "https://firebasestorage.googleapis.com/v0/b/portafolioviktorgonzalez.appspot.com/o/gerosltda.cl.webp?alt=media&token=b3b768b6-7925-4f4f-87d4-ffe82acc68ed",
+    "image_preview": "https://firebasestorage.googleapis.com/v0/b/portafolioviktorgonzalez.appspot.com/o/Geros-Factoring_preview.webp?alt=media&token=f3893456-70d6-4660-bf4f-e9566446949e"
+  },
+  {
+    "id":"3",
+    "title": "Kawell SPA",
+    "position": "Desarrollo sitio web corporativo",
+    "tech": "Wordpress",
+    "url": "https://kawell-spa.cl/",
+    "description": "Encargado del diseño y desarrollo del sitio web corporativo de Kawell SPA, utilizando Wordpress.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/portafolioviktorgonzalez.appspot.com/o/kawell-spa.cl.webp?alt=media&token=f2dcb38e-ef7c-4b4e-a3b4-ed34661ad773",
+    "image_preview": "https://firebasestorage.googleapis.com/v0/b/portafolioviktorgonzalez.appspot.com/o/kawell-spa_preview.png?alt=media&token=e6fe8d57-dd2b-4509-bf80-e379ff8443f9"
+  }
+]
+}
+
+  
