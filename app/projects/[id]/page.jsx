@@ -1,12 +1,11 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Reveal } from "../../components/Reveal";
 import { RevealRight } from "../../components/RevealRight";
 
-const fetchSingleProject = (id) => {
-  return fetch(
+async function generateStaticParams(id) {
+  const projects = await fetch(
     `https://portafolioviktorgonzalez-default-rtdb.firebaseio.com/projects/${
       id - 1
     }.json`,
@@ -16,11 +15,27 @@ const fetchSingleProject = (id) => {
       },
     }
   ).then((res) => res.json());
-};
+
+  return projects;
+}
+
+// const fetchSingleProject = (id) => {
+//   return fetch(
+//     `https://portafolioviktorgonzalez-default-rtdb.firebaseio.com/projects/${
+//       id - 1
+//     }.json`,
+//     {
+//       next: {
+//         revalidate: 60,
+//       },
+//     }
+//   ).then((res) => res.json());
+// };
 
 export default async function Project({ params }) {
-  const { id } = params;
-  const project = await fetchSingleProject(id);
+  const project = await generateStaticParams(params.id);
+  // const { id } = params;
+  // const project = await fetchSingleProject(id);
 
   return (
     <article>
