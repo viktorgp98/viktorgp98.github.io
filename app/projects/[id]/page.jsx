@@ -3,23 +3,10 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { Reveal } from "../../components/Reveal";
 import { RevealRight } from "../../components/RevealRight";
+import getProject from "../../libs/getProject";
 
-async function generateStaticParams(id) {
-  const projects = await fetch(
-    `https://portafolioviktorgonzalez-default-rtdb.firebaseio.com/projects/${
-      id - 1
-    }.json`,
-    {
-      next: {
-        revalidate: 60,
-      },
-    }
-  ).then((res) => res.json());
-
-  return projects;
-}
-
-// const fetchSingleProject = (id) => {
+//getStatic Paths
+// const fetchSingleid = (id) => {
 //   return fetch(
 //     `https://portafolioviktorgonzalez-default-rtdb.firebaseio.com/projects/${
 //       id - 1
@@ -32,11 +19,8 @@ async function generateStaticParams(id) {
 //   ).then((res) => res.json());
 // };
 
-export default async function Project({ params }) {
-  const project = await generateStaticParams(params.id);
-  // const { id } = params;
-  // const project = await fetchSingleProject(id);
-
+export default async function Project({ params: { id } }) {
+  const project = await getProject(id);
   return (
     <article>
       <div className={styles.container}>
@@ -60,7 +44,7 @@ export default async function Project({ params }) {
           <span className={styles.linkUp}>Link del proyecto</span>
         </Link>
         <Reveal>
-          <Image
+          <img
             className={styles.img}
             src={`${project.image}`}
             width={1000}

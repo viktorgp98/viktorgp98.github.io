@@ -16,14 +16,14 @@ export default function AboutPage() {
           </div>
         </RevealRight>
         <Reveal>
-          <Image
+          <img
             className={styles.img}
             priority
             src="https://firebasestorage.googleapis.com/v0/b/portafolioviktorgonzalez.appspot.com/o/fotoviktor.webp?alt=media&token=1a5d3c0b-1346-42ff-b184-73b81b103ee0"
             width={450}
             height={500}
             alt="Foto Viktor Gonzalez"
-          ></Image>
+          ></img>
         </Reveal>
         <Reveal>
           <p className={styles.subTitle}>
