@@ -5,7 +5,9 @@ import { Reveal } from "../../components/Reveal";
 import { RevealRight } from "../../components/RevealRight";
 
 async function fetchProjects(id) {
-  const url = `https://portafolioviktorgonzalez-default-rtdb.firebaseio.com/projects/${id}.json`;
+  const url = `https://portafolioviktorgonzalez-default-rtdb.firebaseio.com/projects/${
+    id - 1
+  }.json`;
   const response = await fetch(url, {
     cache: "force-cache",
   });
