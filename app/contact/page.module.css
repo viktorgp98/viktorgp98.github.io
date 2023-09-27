@@ -130,7 +130,26 @@
 
 /* breakpoints */
 /* tablet */
-@media screen and (min-width: 845px) and (max-width: 1023px) {
+@media screen and (min-width: 845px) and (max-width: 1239px) {
+  .container {
+    padding: 12rem 2rem;
+    min-height: 70vh;
+  }
+  .title {
+    width: 100%;
+  }
+  .preTitle {
+    display: flex;
+    width: 100%;
+  }
+  .buttonMail {
+    margin: 1rem;
+  }
+
+  .info {
+    font-size: var(--int-info-font-size);
+    width: 50vw;
+  }
 }
 /* smartphone */
 @media screen and (max-width: 844px) {

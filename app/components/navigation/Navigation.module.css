@@ -132,9 +132,10 @@
 }
 
 /* breakpoints */
-
+/* phone */
 @media screen and (max-width: 844px) {
-  .nav__menu_active {
+  .navbar .nav__menu_active {
+    display: flex;
     position: fixed;
     background-color: #323232e8;
     left: 0;
@@ -147,6 +148,7 @@
     margin: 0 auto;
     z-index: -1;
   }
+
   .nav__menu {
     position: fixed;
     background-color: #323232e8;
@@ -166,6 +168,7 @@
     padding: 2rem;
     margin: 1.5rem auto;
     row-gap: 2rem;
+    text-transform: uppercase;
   }
   .navbar {
     padding: 1rem 3.5vw;
@@ -183,9 +186,61 @@
     cursor: pointer;
   }
 }
+/* tablet */
 @media screen and (min-width: 845px) and (max-width: 1239px) {
   .navbar {
     padding: 1rem 4.5vw;
+  }
+  .navbar .nav__menu_active {
+    display: flex;
+    position: fixed;
+    background-color: #323232e8;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 5rem 0 4rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 2px 4px Ohsla(38, 4%, 15%, •15);
+    transition: 0.9s;
+    margin: 0 auto;
+    z-index: -1;
+  }
+
+  .nav__menu {
+    position: fixed;
+    background-color: #323232e8;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    padding: 5rem 0 4rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 2px 4px Ohsla(38, 4%, 15%, •15);
+    transition: 0.9s;
+    margin: 0 auto;
+    z-index: -1;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    row-gap: 2rem;
+    text-transform: uppercase;
+  }
+  .navbar {
+    padding: 1rem 3.5vw;
+    width: 90vw;
+  }
+  .nav__toggle {
+    margin: 0px 2vw;
+  }
+  .nav__icon {
+    margin: 0px 0.5rem;
+  }
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
   }
 }
 

@@ -94,6 +94,7 @@
 }
 
 /* breakpoints */
+/* phone */
 @media screen and (max-width: 844px) {
   .titleContainer {
     width: 70%;
@@ -123,6 +124,43 @@
     width: 85vw;
     row-gap: 1rem;
     font-size: var(--int-p-font-size);
+    padding: 1rem;
+  }
+  .buttonTop {
+    padding: 1.75vw 4.5vw;
+    width: 100%;
+  }
+}
+/* tablet */
+@media screen and (min-width: 845px) and (max-width: 1239px) {
+  .titleContainer {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .title {
+    display: block;
+  }
+  .preTitle {
+    justify-content: start;
+    margin: 0 auto;
+    width: 70%;
+  }
+  .img {
+    width: 60%;
+    height: 100%;
+  }
+  .subTitle {
+    width: 80vw;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    row-gap: 1rem;
+    font-size: var(--int-info-font-size);
     padding: 1rem;
   }
   .buttonTop {

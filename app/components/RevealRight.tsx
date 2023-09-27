@@ -6,8 +6,8 @@ interface Props {
 children: JSX.Element;
 }
 export const RevealRight = ({ children }: Props) => {
-    const ref = useRef(null);
-    const isInView =useInView(ref,{once:true});
+    const ref = useRef();
+    const isInView =useInView(ref,{once:false,amount:0.5});
     const mainControls = useAnimation();
     useEffect(()=>{
         if(isInView){
@@ -16,7 +16,7 @@ export const RevealRight = ({ children }: Props) => {
     },[isInView]);
 
     return (
-        <div ref={ref}
+        <motion.div ref={ref}
          >
             <motion.div
                 variants={{
@@ -24,9 +24,10 @@ export const RevealRight = ({ children }: Props) => {
                     visible:{opacity:1,x:0},
                 }}
                 initial="hidden"
+                whileInView="visible"
                 animate={mainControls}
                 transition={{duration:0.5,delay:0.25}}
             >{children}</motion.div>
-        </div>  
+        </motion.div>  
     )
 }

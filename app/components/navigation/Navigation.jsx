@@ -40,6 +40,7 @@ export function Navigation() {
           <Image
             alt="ViktorGonzalez Logo"
             src="/viktor_logo_color_white.svg"
+            priority
             height={100}
             width={150}
           />

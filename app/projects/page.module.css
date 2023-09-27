@@ -149,6 +149,8 @@
   transition-delay: 0.2s;
 }
 
+/* breakpoints */
+/* phone */
 @media screen and (max-width: 844px) {
   .card {
     height: 24rem;
@@ -163,6 +165,25 @@
     flex-wrap: wrap;
     flex-direction: row;
     font-size: var(--int-p-font-size);
+    row-gap: 1rem;
+    width: 85vw;
+  }
+}
+/* tablet */
+@media screen and (min-width: 845px) and (max-width: 1239px) {
+  .card {
+    height: 31rem;
+  }
+  .texts {
+    width: 85vw;
+  }
+  .container {
+    padding: 7rem 0;
+  }
+  .info {
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: var(--int-info-font-size);
     row-gap: 1rem;
     width: 85vw;
   }
