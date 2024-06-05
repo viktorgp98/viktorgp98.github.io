@@ -4,9 +4,13 @@
 let envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true
 
 const nextConfig = {
-    output: 'export',
-    reactStrictMode: true,
-    }
+  
+  reactStrictMode: true,
+
+ // Add basePath
+  basePath: 'https://viktorgp98.github.io/',
+
+}
     module.exports = nextConfig
   
   
