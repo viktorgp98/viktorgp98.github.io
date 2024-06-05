@@ -2,6 +2,7 @@
   "name": "portfolio_2023",
   "version": "1.2.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
