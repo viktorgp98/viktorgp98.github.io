@@ -1,0 +1,56 @@
+.mainContainer {
+  margin: 0 auto;
+  width: 90vw;
+  height: 90vh;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+  height: 90vh;
+  /* padding: 10rem; */
+}
+
+/* Collage */
+.titleCollage {
+  position: absolute;
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 1.7rem;
+  text-shadow: 0.1px 0.1px 0.2px black;
+}
+
+.gridwrapper > img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+.gridwrapper > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gridwrapper > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.gridwrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 350px;
+  grid-auto-flow: dense;
+}
+.gridwrapper > .wide {
+  grid-column: span 2;
+}
+.gridwrapper > .tall {
+  grid-row: span 2;
+}
+.gridwrapper > .big {
+  grid-row: span 2;
+  grid-column: span 2;
+}

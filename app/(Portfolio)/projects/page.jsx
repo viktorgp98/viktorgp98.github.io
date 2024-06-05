@@ -2,8 +2,8 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { AiOutlineLink, AiFillHtml5 } from "react-icons/ai";
 import { BiLogoWordpress, BiLogoCss3, BiLogoJavascript } from "react-icons/bi";
-import { RevealRight } from "../components/RevealRight";
-import { Reveal } from "../components/Reveal";
+import { RevealRight } from "../../components/RevealRight";
+import { Reveal } from "../../components/Reveal";
 import { use } from "react";
 
 async function getProjects() {

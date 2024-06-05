@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { RevealRight } from "../components/RevealRight";
-import { Reveal } from "../components/Reveal";
+import { RevealRight } from "../../components/RevealRight";
+import { Reveal } from "../../components/Reveal";
 export default function AboutPage() {
   return (
     <section className={styles.container}>

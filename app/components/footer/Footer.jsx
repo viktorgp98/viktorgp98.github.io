@@ -47,7 +47,7 @@ export function Footer() {
           </div>
         </div>
         <Reveal>
-          <div className={styles.watermark}>©2023 Viktor González P.</div>
+          <div className={styles.watermark}>©2024 Viktor González P.</div>
         </Reveal>
       </RevealRight>
     </div>

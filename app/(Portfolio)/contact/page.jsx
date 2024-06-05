@@ -2,8 +2,8 @@ import styles from "./page.module.css";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
 import Link from "next/link";
-import { Reveal } from "../components/Reveal";
-import { RevealRight } from "../components/RevealRight";
+import { Reveal } from "../../components/Reveal";
+import { RevealRight } from "../../components/RevealRight";
 
 export default function Contact() {
   return (

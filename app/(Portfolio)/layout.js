@@ -1,6 +1,6 @@
 import './globals.css'
-import { Navigation } from './components/navigation/Navigation'
-import {Footer} from './components/footer/Footer'
+import { Navigation } from '../components/navigation/Navigation'
+import {Footer} from '../components/footer/Footer'
 
 export const metadata = {
   title: 'Viktor González P. | Freelance Web Developer',
