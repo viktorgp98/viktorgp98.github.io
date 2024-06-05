@@ -1,6 +1,6 @@
 /**
  * @type {import('next').NextConfig}
- */
+ */let envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true
 const nextConfig = {
   output: "export",
   images: {
@@ -14,11 +14,8 @@ const nextConfig = {
                   },
                 ],
             }
-      ,experimental: {
-        images: {
-          unoptimized: true,
-        },
-      },      
+      ,    
+      pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'], 
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
  
