@@ -13,7 +13,7 @@ export default function Love() {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    autoplay: false,
+    autoplay: true,
     speed: 2000,
     autoplaySpeed: 6000,
     responsive: [
