@@ -3,7 +3,17 @@
  */
 const nextConfig = {
   output: "export",
- 
+  images: {
+              unoptimized: envImageUnoptimize,
+              loader: 'imgix',
+              path: '/',
+                remotePatterns: [
+                  {
+                    protocol: 'https',
+                    hostname: 'firebasestorage.googleapis.com',
+                  },
+                ],
+            }
   // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
   // trailingSlash: true,
  
