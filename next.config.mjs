@@ -4,7 +4,7 @@
 
 
 const nextConfig = {
-  
+  output: 'export',
   reactStrictMode: true,
   experimental: {
     images: {
