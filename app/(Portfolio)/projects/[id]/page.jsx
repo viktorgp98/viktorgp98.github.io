@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Reveal } from "../../components/Reveal";
-import { RevealRight } from "../../components/RevealRight";
+import { Reveal } from "../../../components/Reveal";
+import { RevealRight } from "../../../components/RevealRight";
 
 async function fetchProjects(id) {
   const url = `https://portafolioviktorgonzalez-default-rtdb.firebaseio.com/projects/${
