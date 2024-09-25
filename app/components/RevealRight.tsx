@@ -11,13 +11,13 @@ export const RevealRight = ({ children }: Props) => {
     const mainControls = useAnimation();
     useEffect(()=>{
         if(isInView){
-           mainControls.start("visible");
+        mainControls.start("visible");
         }
     },[isInView]);
 
     return (
         <motion.div ref={ref}
-         >
+        >
             <motion.div
                 variants={{
                     hidden:{opacity:0, x:-75},

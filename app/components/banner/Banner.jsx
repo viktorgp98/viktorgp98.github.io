@@ -1,5 +1,5 @@
 import styles from "./Banner.module.css";
-import { Reveal } from "../Reveal";
+import { Reveal } from "../RevealLeftToRight";
 export function Banner() {
   return (
     <div className={styles.container}>
