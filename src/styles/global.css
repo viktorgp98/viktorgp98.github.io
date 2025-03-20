@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8245bf;
+  --color-primary-light: #e15cf2;
+
+  --color-secondary: #d9d9d9;
+  --color-dark: #141513;
+}
+//text-wrap:balance
+h1 {
+  font-family: "Anton", sans-serif;
+}
