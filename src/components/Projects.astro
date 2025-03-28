@@ -1,4 +1,47 @@
-<section>
-  <div>PROJECTS</div>
+---
+import { Image } from "astro:assets";
+---
+
+<section class="min-h-screen bg-primary">
+  <div class="container mx-auto p-10">
+    <div>
+      <h2 class="font-bold">Proyectos seleccionados</h2>
+    </div>
+    <div class="grid grid-cols-4 grid-rows-7 gap-5">
+      <div class="col-span-2 row-span-4 bg-secondary">
+        <Image
+          class="grayscale hover:grayscale-0 transition-all duration-200"
+          src="https://picsum.photos/600/400?random=2"
+          alt="random"
+          inferSize={true}
+        />
+      </div>
+      <div class="col-span-2 row-span-3 col-start-3 bg-secondary">
+        <Image
+          class="grayscale hover:grayscale-0 transition-all duration-200"
+          src="https://picsum.photos/600/400?random=1"
+          alt="random"
+          inferSize={true}
+        />
+      </div>
+      <div class="col-span-2 row-span-4 col-start-3 row-start-4 bg-secondary">
+        <Image
+          class="grayscale hover:grayscale-0 transition-all duration-200"
+          src="https://picsum.photos/600/400?random=3"
+          alt="randome"
+          inferSize={true}
+        />
+      </div>
+      <div class="col-span-2 row-span-3 row-start-5 bg-secondary">
+        <Image
+          class="grayscale hover:grayscale-0 transition-all duration-200"
+          src="https://picsum.photos/600/400?random=5"
+          alt="random"
+          inferSize={true}
+        />
+      </div>
+    </div>
+  </div>
+
   <!-- mockups de proyectos en escritorio y telefono seleccionables? -->
 </section>

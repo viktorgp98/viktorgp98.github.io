@@ -7,15 +7,13 @@ import Projects from "@/components/Projects.astro";
 import About from "@/components/About.astro";
 import Contact from "@/components/Contact.astro";
 import Footer from "@/components/Footer.astro";
-import "@fontsource/anton";
 ---
 
-<Layout>
-  <Hero client:load />
+<Layout class:list={["h-screen", "bg-primary"]}>
+  <Hero />
   <Skills />
   <Experience />
   <Projects />
   <About />
   <Contact />
-  <Footer />
 </Layout>

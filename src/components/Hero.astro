@@ -1,14 +1,67 @@
-<section>
-  <div class="grid grid-cols-3 grid-rows-6 min-h-screen">
-    <div
-      class="col-span-3 row-span-3 bg-[image:url(/images/banner.gif)] bg-cover bg-origin-border bg-no-repeat bg-center"
-    >
-    </div>
-    <div class="col-span-2 row-span-3 row-start-4 bg-dark">
-      <h3 class="text-white">Contacto</h3>
-    </div>
-    <div class="row-span-3 col-start-3 row-start-4 bg-secondary">3</div>
+---
+import GradientText from "@/components/GradientText.jsx";
 
-    <!-- Fondo de pantalla video programando o animacion a una imagen  -->
+const sites = [
+  {
+    link: "/documents/CV-ViktorGonzalez-2025.pdf",
+    title: "CV",
+    icon: "icon-[tabler--file-cv-filled]",
+    download: "cv_viktorgonzalez.pdf",
+  },
+  {
+    link: "mailto:viktor.gonzalezp98@gmail.com",
+    title: "Correo",
+    icon: "icon-[icon-park-twotone--mail]",
+  },
+  {
+    link: "https://www.linkedin.com/in/viktorgonzalezp/",
+    title: "LinkedIn",
+    icon: "icon-[mdi--linkedin]",
+  },
+  {
+    link: "https://github.com/viktorgp98",
+    title: "Github",
+    icon: "icon-[ph--github-logo-duotone]",
+  },
+];
+---
+
+<section class="relative h-screen">
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat flex justify-center items-center bg-grey"
+    style="background-image: url('/images/banner.webp');"
+  >
+    <div class="relative z-10 text-white container">
+      <div class="flex flex-col items-center justify-center mx-5">
+        <p class="mb-7 text-4xl">Desarrollador Full Stack Junior</p>
+        <GradientText
+          colors={["#f26bb5", "#5d5f8c", "#f26bb5", "#5d5f8c"]}
+          animationSpeed={9.5}
+          showBorder={false}
+          className="text-7xl font-bold font-title mobile:text-xl sm:text-3xl md:text-5xl xl:text-8xl"
+        >
+          <h1>VIKTOR GONZÁLEZ PINTO</h1>
+        </GradientText>
+
+        <p class="mt-7 text-2xl mb-10">Apasionado por la Innovación Web</p>
+      </div>
+      <!-- enlaces  -->
+      <div
+        class="social-links flex flex-row gap-x-10 items-center justify-center mt-4"
+      >
+        {
+          sites.map((site) => (
+            <a href={site.link} download={site.download} target="_blank">
+              <title>{site.title}</title>
+              <span
+                class={`${site.icon} text-primary icon-size px-10 hover:scale-125 hover:bg-primary-light transition-all duration-200`}
+                role="img"
+                aria-hidden="true"
+              />
+            </a>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </section>
