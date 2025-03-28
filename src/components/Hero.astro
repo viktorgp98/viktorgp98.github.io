@@ -1,5 +1,6 @@
 ---
-import GradientText from "@/components/GradientText.jsx";
+import GradientText from "@/components/gradientText/GradientText.jsx";
+import { HoverButton } from "@/components/button/HoverButton.jsx";
 
 const sites = [
   {
@@ -8,11 +9,7 @@ const sites = [
     icon: "icon-[tabler--file-cv-filled]",
     download: "cv_viktorgonzalez.pdf",
   },
-  {
-    link: "mailto:viktor.gonzalezp98@gmail.com",
-    title: "Correo",
-    icon: "icon-[icon-park-twotone--mail]",
-  },
+
   {
     link: "https://www.linkedin.com/in/viktorgonzalezp/",
     title: "LinkedIn",
@@ -31,30 +28,48 @@ const sites = [
     class="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat flex justify-center items-center bg-grey"
     style="background-image: url('/images/banner.webp');"
   >
-    <div class="relative z-10 text-white container">
-      <div class="flex flex-col items-center justify-center mx-5">
-        <p class="mb-7 text-4xl">Desarrollador Full Stack Junior</p>
+    <div class="relative z-10 text-white">
+      <div class="flex flex-col items-center justify-center margin-xl">
+        <h4 class="text-4xl margin-l">Desarrollador Full Stack Junior</h4>
         <GradientText
           colors={["#f26bb5", "#5d5f8c", "#f26bb5", "#5d5f8c"]}
-          animationSpeed={9.5}
+          animationSpeed={8.5}
           showBorder={false}
-          className="text-7xl font-bold font-title mobile:text-xl sm:text-3xl md:text-5xl xl:text-8xl"
         >
           <h1>VIKTOR GONZÁLEZ PINTO</h1>
         </GradientText>
 
-        <p class="mt-7 text-2xl mb-10">Apasionado por la Innovación Web</p>
+        <h5 class="margin-xl text-2xl mb-10">
+          Apasionado por la Innovación Web
+        </h5>
       </div>
       <!-- enlaces  -->
       <div
-        class="social-links flex flex-row gap-x-10 items-center justify-center mt-4"
+        class="call-to-action flex flex-row gap-x-5 items-center justify-center margin-xl"
+      >
+        <HoverButton>Ver proyectos</HoverButton>
+        <a
+          href="#contact"
+          class="justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background h-10 px-4 py-2 group transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-primary-foreground flex items-center gap-2"
+        >
+          <span class="flex items-center gap-2">
+            Contáctame
+            <span
+              class="icon-[carbon--send] h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              role="img"
+              aria-hidden="true"></span>
+          </span>
+        </a>
+      </div>
+      <div
+        class="social-links flex flex-row gap-x-5 items-center justify-center margin-xl"
       >
         {
           sites.map((site) => (
             <a href={site.link} download={site.download} target="_blank">
               <title>{site.title}</title>
               <span
-                class={`${site.icon} text-primary icon-size px-10 hover:scale-125 hover:bg-primary-light transition-all duration-200`}
+                class={`${site.icon} text-primary icon-size px-10 hover:scale-125 hover:bg-primary transition-all duration-200`}
                 role="img"
                 aria-hidden="true"
               />

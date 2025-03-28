@@ -23,18 +23,23 @@ const socials = [
 ---
 
 <footer
-  class="relative max-w-screen container mx-auto w-full p-10 bg-grey border-bd-color border-t-1 h-[200px] flex flex-row justify-between items-center px-10 text-white"
+  class="relative max-w-screen container mx-auto w-full p-10 bg-grey border-bd-color border-t-1 h-[150px] flex flex-row justify-between items-center px-10 text-white"
 >
   <div class="footer-content">
     <p class="text-white">Desarrollado 💻 por Viktor Gonzalez P.</p>
   </div>
-  <div class="social-links">
+  <div class="social-links flex md:flex-row flex-col gap-x-10">
     {
       socials.map((social) => {
         return (
-          <a href={social.link} download={social.download} target="_blank">
+          <a
+            class="w-[100px] flex flex-row items-center justify-center"
+            href={social.link}
+            download={social.download}
+            target="_blank"
+          >
             <span
-              class={`${social.icon} text-primary w-6 h-6 px-10`}
+              class={`${social.icon} text-primary w-1 h-6 px-5`}
               role="img"
               aria-hidden="true"
               id={social.id}
