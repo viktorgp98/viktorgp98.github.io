@@ -1,13 +1,104 @@
 @import "tailwindcss";
-
+@plugin "@iconify/tailwind4";
+@import "tailwindcss/preflight";
+@tailwind utilities;
 @theme {
-  --color-primary: #8245bf;
-  --color-primary-light: #e15cf2;
+  /* COLOR LIGHTMode */
+
+  /* COLOR DARKMode */
+  --color-primary-light: rgb(240, 167, 209);
+  --color-primary: #f57fc4;
 
   --color-secondary: #d9d9d9;
   --color-dark: #141513;
+  --color-grey-light: #5d5f8c;
+  --color-grey: #1a1a1a;
+
+  --font-title: "Clash Display", "Clash Display Placeholder", sans-serif;
+  --bd-color: rgba(217, 217, 217, 0.5);
+
+  --mi-ancho: 2.1rem;
+  --mi-alto: 1.7rem;
+  /* Margenes */
+  --margin-xss: 0.25rem;
+  --margin-xs: 0.5rem;
+  --margin-s: 0.75rem;
+  --margin-m: 1rem;
+  --margin-l: 1.25rem;
+  --margin-xl: 1.75rem;
+  --margin-xxl: 2.5rem;
 }
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist-Medium.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist-Bold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+html {
+  font-family: "Geist", sans-serif;
+}
+/* Color Theme Swatches in Hex */
+/* .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-1-hex { color: #F26BB5; }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-2-hex { color: #D971AA; }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-3-hex { color: #191726; }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-4-hex { color: #5D5F8C; }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-5-hex { color: #3C4959; } */
+
+/* Color Theme Swatches in RGBA */
+/* .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-1-rgba { color: rgba(242, 106, 181, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-2-rgba { color: rgba(216, 112, 169, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-3-rgba { color: rgba(24, 22, 38, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-4-rgba { color: rgba(92, 94, 140, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-5-rgba { color: rgba(59, 72, 89, 1); } */
+
+/* Color Theme Swatches in HSLA */
+/* .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-1-hsla { color: hsla(326, 84, 68, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-2-hsla { color: hsla(326, 57, 64, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-3-hsla { color: hsla(247, 25, 12, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-4-hsla { color: hsla(236, 20, 45, 1); }
+.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-5-hsla { color: hsla(213, 19, 29, 1); } */
 //text-wrap:balance
 h1 {
-  font-family: "Anton", sans-serif;
+  font-family: "Clash Display", "Clash Display Placeholder", sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    animation: gradient 8s linear infinite;
+  }
+
+  .icon-size {
+    width: var(--mi-ancho);
+    height: var(--mi-alto);
+  }
 }
