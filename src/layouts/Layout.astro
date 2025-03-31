@@ -32,8 +32,10 @@ import Footer from "@/components/Footer.astro";
       import Lenis from "lenis";
       import gsap from "gsap";
       import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-      const lenis = new Lenis();
+      // Initialize a new Lenis instance for smooth scrolling
+      const lenis = new Lenis({
+        anchors: true,
+      });
 
       // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
       lenis.on("scroll", ScrollTrigger.update);
@@ -46,17 +48,6 @@ import Footer from "@/components/Footer.astro";
 
       // Disable lag smoothing in GSAP to prevent any delay in scroll animations
       gsap.ticker.lagSmoothing(0);
-
-      /* const lenis = new Lenis();
-
-      function raf(time: any) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
-
-      requestAnimationFrame(raf); */
     </script>
   </body>
 </html>

@@ -33,7 +33,7 @@ const sites = [
         <h4 class="text-4xl margin-l">Desarrollador Full Stack Junior</h4>
         <GradientText
           colors={["#f26bb5", "#5d5f8c", "#f26bb5", "#5d5f8c"]}
-          animationSpeed={8.5}
+          animationSpeed={7.5}
           showBorder={false}
         >
           <h1>VIKTOR GONZÁLEZ PINTO</h1>
@@ -47,9 +47,17 @@ const sites = [
       <div
         class="call-to-action flex flex-row gap-x-5 items-center justify-center margin-xl"
       >
-        <HoverButton>Ver proyectos</HoverButton>
+        <HoverButton>
+          <a
+            href="#projects"
+            onclick="lenis.scrollTo('#contact',{offset:100,duration:10})"
+          >
+            Ver proyectos
+          </a>
+        </HoverButton>
         <a
           href="#contact"
+          onclick="lenis.scrollTo('#contact',{offset:100,duration:10})"
           class="justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background h-10 px-4 py-2 group transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-primary-foreground flex items-center gap-2"
         >
           <span class="flex items-center gap-2">
@@ -76,6 +84,7 @@ const sites = [
             </a>
           ))
         }
+        {}
       </div>
     </div>
   </div>

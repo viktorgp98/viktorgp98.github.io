@@ -172,6 +172,24 @@ p {
   }
 }
 
+/* lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 /* Color Theme Swatches in Hex */
 /* .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-1-hex { color: #F26BB5; }
 .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-2-hex { color: #D971AA; }
