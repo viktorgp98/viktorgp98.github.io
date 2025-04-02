@@ -6,14 +6,14 @@ const sites = [
   {
     link: "/documents/CV-ViktorGonzalez-2025.pdf",
     title: "CV",
-    icon: "icon-[tabler--file-cv-filled]",
+    icon: "icon-[ph--read-cv-logo-duotone]",
     download: "cv_viktorgonzalez.pdf",
   },
 
   {
     link: "https://www.linkedin.com/in/viktorgonzalezp/",
     title: "LinkedIn",
-    icon: "icon-[mdi--linkedin]",
+    icon: "icon-[ph--linkedin-logo-duotone]",
   },
   {
     link: "https://github.com/viktorgp98",
@@ -23,7 +23,7 @@ const sites = [
 ];
 ---
 
-<section class="relative h-screen">
+<section class="secc-hero relative h-screen">
   <div
     class="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat flex justify-center items-center bg-grey"
     style="background-image: url('/images/banner.webp');"
@@ -48,29 +48,30 @@ const sites = [
         class="call-to-action flex flex-row gap-x-5 items-center justify-center margin-xl"
       >
         <HoverButton>
-          <a
-            href="#projects"
-            onclick="lenis.scrollTo('#contact',{offset:100,duration:10})"
-          >
+          <a href="#projects" onclick="lenis.scrollTo('#contact')">
             Ver proyectos
           </a>
         </HoverButton>
         <a
           href="#contact"
-          onclick="lenis.scrollTo('#contact',{offset:100,duration:10})"
-          class="justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input bg-background h-10 px-4 py-2 group transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-primary-foreground flex items-center gap-2"
+          onclick="lenis.scrollTo('#contact')"
+          class="justify-center whitespace-nowrap
+          rounded-md text-sm font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
+          focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0
+          border border-input bg-background h-10 px-4 py-2 group transition-all duration-200 hover:scale-105 hover:bg-primary hover:text-primary-foreground
+          flex items-center gap-2"
         >
           <span class="flex items-center gap-2">
-            Contáctame
+            Contacto
             <span
-              class="icon-[carbon--send] h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              class="icon-[carbon--send] h-4 w-4 transition-transform duration-100 group-hover:translate-x-1"
               role="img"
               aria-hidden="true"></span>
           </span>
         </a>
       </div>
       <div
-        class="social-links flex flex-row gap-x-5 items-center justify-center margin-xl"
+        class="social-links flex flex-row gap-x-5 items-center justify-center margin-3xl"
       >
         {
           sites.map((site) => (
@@ -84,7 +85,16 @@ const sites = [
             </a>
           ))
         }
-        {}
+      </div>
+      <div
+        class="absolute inset-x-0 bottom-0 top-150 flex flex-row gap-x-5 items-center justify-center pt-10"
+      >
+        <a href="#skills" onclick="lenis.scrollTo('#skills')">
+          <span
+            class="icon-[ph--arrow-circle-down-duotone] w-10 h-10 animate-[sink_1s_ease-in-out_infinite]"
+            role="img"
+            aria-hidden="true"></span>
+        </a>
       </div>
     </div>
   </div>

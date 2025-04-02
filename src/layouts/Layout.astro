@@ -3,6 +3,7 @@ import "@/styles/global.css";
 const { title = "Viktor Gonzalez P |  FullStack Web Developer Junior" } =
   Astro.props;
 import Footer from "@/components/Footer.astro";
+import "lenis/dist/lenis.css";
 ---
 
 <!doctype html>
@@ -28,30 +29,40 @@ import Footer from "@/components/Footer.astro";
       <slot />
     </main>
     <Footer />
+
     <script>
       import Lenis from "lenis";
       import gsap from "gsap";
       import { ScrollTrigger } from "gsap/ScrollTrigger";
-      // Initialize a new Lenis instance for smooth scrolling
       const lenis = new Lenis({
         anchors: true,
+        orientation: "vertical",
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        duration: 1.3,
       });
 
-      // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
       lenis.on("scroll", ScrollTrigger.update);
-
-      // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-      // This ensures Lenis's smooth scroll animation updates on each GSAP tick
       gsap.ticker.add((time) => {
-        lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+        lenis.raf(time * 1000);
       });
-
-      // Disable lag smoothing in GSAP to prevent any delay in scroll animations
       gsap.ticker.lagSmoothing(0);
+      /* gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".secc-hero", {
+        yPercent: 100,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".secc-skills",
+          start: "top bottom",
+          end: "top top",
+          scrub: true,
+        },
+      }); */
     </script>
   </body>
 </html>
 
+<link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css" />
 <style>
   html,
   body {

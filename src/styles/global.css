@@ -52,7 +52,8 @@
   --margin-m: 1rem;
   --margin-l: 1.25rem;
   --margin-xl: 1.75rem;
-  --margin-xxl: 2.5rem;
+  --margin-2xl: 2.5rem;
+  --margin-3xl: 3rem;
 
   /* fonts */
   --ff: "Geist", sans-serif;
@@ -72,6 +73,16 @@
   --bigui: 1rem/1.6em var(--ff);
   --pui: 0.8rem/1.6em var(--ff);
   --smallui: 0.75rem/1.8em var(--ff);
+
+  @keyframes sink {
+    0%,
+    100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+  }
 }
 
 body {
@@ -167,8 +178,11 @@ p {
   .margin-xl {
     margin: var(--margin-xl);
   }
-  .margin-xxl {
-    margin: var(--margin-xxl);
+  .margin-2xl {
+    margin: var(--margin-2xl);
+  }
+  .margin-3xl {
+    margin: var(--margin-3xl);
   }
 }
 
