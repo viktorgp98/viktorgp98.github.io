@@ -23,33 +23,37 @@ const socials = [
 ---
 
 <footer
-  class="relative max-w-screen container mx-auto w-full p-5 md:p-10 bg-grey border-bd-color border-t-1 h-[150px] flex flex-row justify-between items-center px-10 text-white"
+  class="w-full p-5 md:p-10 bg-grey border-bd-color border-t-1 text-white"
 >
-  <div class="footer-content">
-    <p class="text-white">Desarrollado 💻 por Viktor Gonzalez P.</p>
-  </div>
-  <div class="social-links flex md:flex-row flex-col gap-x-5 md:gap-x-10">
-    {
-      socials.map((social) => {
-        return (
-          <a
-            class="w-[100px] flex flex-row items-center justify-center"
-            href={social.link}
-            download={social.download}
-            target="_blank"
-          >
-            <span
-              class={`${social.icon} text-primary w-1 h-6 px-5`}
-              role="img"
-              aria-hidden="true"
-              id={social.id}
-            />
-            <label for={social.id} class="cursor-pointer">
-              {social.title}
-            </label>
-          </a>
-        );
-      })
-    }
+  <div
+    class="container mx-auto flex flex-row justify-between items-center md:px-10"
+  >
+    <div class="footer-content">
+      <p class="text-white">Desarrollado 💻 por Viktor Gonzalez P.</p>
+    </div>
+    <div class="social-links flex md:flex-row flex-col gap-x-5 md:gap-x-10">
+      {
+        socials.map((social) => {
+          return (
+            <a
+              class="w-[100px] flex flex-row items-center justify-center"
+              href={social.link}
+              download={social.download}
+              target="_blank"
+            >
+              <span
+                class={`${social.icon} text-primary w-1 h-6 px-5`}
+                role="img"
+                aria-hidden="true"
+                id={social.id}
+              />
+              <label for={social.id} class="cursor-pointer">
+                {social.title}
+              </label>
+            </a>
+          );
+        })
+      }
+    </div>
   </div>
 </footer>
