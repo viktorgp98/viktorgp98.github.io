@@ -10,7 +10,7 @@ import "lenis/dist/lenis.css";
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
     <title>{title}</title>
     <link
       rel="icon"
@@ -83,7 +83,7 @@ import "lenis/dist/lenis.css";
       });
       tl2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".secc-contact",
+          trigger: ".secc-projects",
           start: "top bottom",
           end: "top top",
           scrub: true,
@@ -91,7 +91,7 @@ import "lenis/dist/lenis.css";
         },
       });
 
-      tl2.to(".secc-about", {
+      tl2.to(".secc-experience", {
         yPercent: 100,
         ease: "none",
       });
@@ -104,8 +104,8 @@ import "lenis/dist/lenis.css";
   html,
   body {
     margin: 0px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
   main {
     min-height: 100vh;
