@@ -65,13 +65,14 @@
   --small: 0.75rem/2em var(--ff);
 
   /* UIs */
-  --h1ui: bold 3rem/1.2em var(--ff);
+  --h1ui: bold 15vw var(--ff);
   --h2ui: bold 2.25rem/1.2em var(--ff);
   --h3ui: bold 1.5rem/1.2em var(--ff);
   --h4ui: bold 1.12rem/1.6em var(--ff);
   --bigui: 1rem/1.6em var(--ff);
   --pui: 0.8rem/1.6em var(--ff);
   --smallui: 0.75rem/1.8em var(--ff);
+  --resh1: bold 1.5vw/1.2vw var(--ff);
 
   @keyframes sink {
     0%,
@@ -89,70 +90,7 @@ body {
   text-wrap: balance;
 }
 
-/* landing page */
-h1 {
-  font: var(--h1);
-}
-h2 {
-  font: var(--h2);
-}
-h3 {
-  font: var(--h3);
-}
-h4 {
-  font: var(--h4);
-}
-.big {
-  font: var(--big);
-}
-p {
-  font: var(--p);
-}
-.small {
-  font: var(--small);
-}
-
-/* UIs */
-.ui h1 {
-  font: var(--h1ui);
-}
-.ui h2 {
-  font: var(--h2ui);
-}
-.ui h3 {
-  font: var(--h3ui);
-}
-.ui h4 {
-  font: var(--h4ui);
-}
-.ui .big {
-  font: var(--bigui);
-}
-.ui p {
-  font: var(--pui);
-}
-.ui .small {
-  font: var(--smallui);
-}
-
-/* gradient text */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 @layer utilities {
-  .animate-gradient {
-    animation: gradient 8s linear infinite;
-  }
-
   .icon-size {
     width: var(--mi-ancho);
     height: var(--mi-alto);
@@ -186,6 +124,9 @@ p {
 }
 
 /* lenis */
+html {
+  font-family: var(--ff);
+}
 html.lenis,
 html.lenis body {
   height: auto;
