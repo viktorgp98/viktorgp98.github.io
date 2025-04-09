@@ -21,6 +21,17 @@ const sites = [
     icon: "icon-[ph--github-logo-duotone]",
   },
 ];
+const pretitle = `Desarrollador { FullStack } Junior`;
+// src/components/HoraChileServidor.astro
+/* import { onMount } from 'astro:client';
+
+let horaChile = 'Cargando hora...';
+
+onMount(async () => {
+  const response = await fetch('/api/hora-chile');
+  const data = await response.json();
+  horaChile = data.hora;
+}); */
 ---
 
 <section class="section secc-hero relative h-screen w-full">
@@ -29,19 +40,22 @@ const sites = [
     style="background-image: url('/images/banner.webp');"
   >
     <div
-      class="container mx-auto p-5 md:p-11 absolute z-10 flex flex-col items-start text-white gap-10"
+      class="container mx-auto place-self-center p-5 md:p-11 absolute z-10 flex flex-col items-start text-white gap-10"
     >
       <!-- available -->
       <div
-        class="available absolute top-0 right-0 flex-row flex justify-end items-center gap-2 text-sm text-zinc-400"
+        class="available absolute
+        right-5 -top-15 flex-row flex justify-end items-center gap-2 text-sm text-zinc-400"
       >
         <div class="size-1.5 rounded-full bg-green-400 z-10"></div>
         <span class="text-xs">Disponible para trabajar</span>
+        <span class="icon-[openmoji--flag-chile]" role="img" aria-hidden="true"
+        ></span>
       </div>
       <!-- title -->
       <div class="flex flex-col gap-2 md:gap-5 items-start justify-start">
         <h4 class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)]">
-          Desarrollador Full Stack Junior
+          {pretitle}
         </h4>
         <GradientText
           colors={["#f26bb5", "#5d5f8c", "#f26bb5", "#5d5f8c"]}
@@ -66,7 +80,7 @@ const sites = [
         >
           <!-- projects -->
           <HoverButton>
-            <a href="#projects" onclick="lenis.scrollTo('#contact')">
+            <a href="#projects" onclick="lenis.scrollTo('#projects')">
               Ver proyectos
             </a>
           </HoverButton>
@@ -108,9 +122,9 @@ const sites = [
       </div>
 
       <div
-        class="absolute inset-x-0 bottom-0 top-150 md:top-140 flex flex-row gap-x-5 items-center justify-center pt-10"
+        class="absolute inset-x-0 bottom-0 top-120 md:top-140 flex flex-row gap-x-5 items-center justify-center pt-10"
       >
-        <a href="#skills" onclick="lenis.scrollTo('#skills')">
+        <a href="#about" onclick="lenis.scrollTo('#about')">
           <title>Siguiente seccion</title>
           <span
             class="icon-[ph--arrow-circle-down-duotone] w-10 h-10 animate-[sink_1s_ease-in-out_infinite]"
