@@ -1,11 +1,46 @@
-<section class="section secc-about bg-primary-light min-h-screen relative">
-  <div class="container mx-auto p-5 md:p-10">
-    <h2 class="font-bold">Sobre mi</h2>
+---
+import { Image } from "astro:assets";
+---
 
-    <p>
-      Soy Analista Programador con experiencia en desarrollo web. Explora mis
-      proyectos en React, Python, Wordpress y más. Descubre mis habilidades en
-      React, Node, Bases de Datos y Gestión de Proyectos.
-    </p>
+<section
+  id="about"
+  class="section secc-about bg-primary-light min-h-screen relative"
+>
+  <div class="container mx-auto p-5 md:p-10 flex flex-col gap-6">
+    <h2
+      class="text-[clamp(1rem, calc(5vw + .6rem), 4rem)] font-bold italic text-shadow-md uppercase"
+    >
+      Sobre mi /
+    </h2>
+    <div class="card border-1 rounded-xl shadow-lg bg-light-grey">
+      <div class="image border-5 border-gray-50 rounded-xl">
+        <Image
+          class="grayscale hover:grayscale-0 transition-all duration-200 rounded-sm"
+          src="/images/viktor_pic.webp"
+          alt="Una imagen de Viktor González Pinto"
+          width={500}
+          height={300}
+        />
+      </div>
+      <div class="content rounded-xl p-2 flex flex-col gap-4">
+        <p>
+          Desarrollador Fullstack Junior residente en Rancagua, Chile. Me siento
+          particularmente atraído por la capacidad del desarrollo de software
+          para generar soluciones con un impacto real en quienes las utilizan.
+          Encuentro gran satisfacción en ver cómo una idea se materializa en un
+          proyecto funcional que facilita tareas y puede generar experiencias
+          positivas. Disfruto trabajar con JavaScript y sus frameworks, aunque
+          estoy en constante aprendizaje y abierto a explorar nuevas tecnologías
+          para robustecer mi lógica de programación.
+        </p>
+        <p>
+          Fuera del ámbito profesional, me gusta mantenerme activo con
+          videojuegos, disfrutar de series y películas, y también tocar
+          instrumentos. Mi enfoque se centra en la superación continua y la
+          búsqueda de la excelencia en cada proyecto, explorando mis capacidades
+          para alcanzar mi máximo potencial.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
