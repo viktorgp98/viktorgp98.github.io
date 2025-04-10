@@ -69,7 +69,7 @@ import "lenis/dist/lenis.css";
       }); */
       tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".secc-about",
+          trigger: ".secc-experience",
           start: "top bottom",
           end: "top top",
           scrub: true,
@@ -83,7 +83,7 @@ import "lenis/dist/lenis.css";
       });
       tl2 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".secc-projects",
+          trigger: ".secc-about",
           start: "top bottom",
           end: "top top",
           scrub: true,
@@ -91,7 +91,7 @@ import "lenis/dist/lenis.css";
         },
       });
 
-      tl2.to(".secc-experience", {
+      tl2.to(".secc-projects", {
         yPercent: 100,
         ease: "none",
       });
