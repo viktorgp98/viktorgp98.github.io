@@ -58,7 +58,7 @@
   /* fonts */
   --ff: "Geist", sans-serif;
   --h1: bold 4rem/1em var(--ff);
-  --h2: bold 3rem/1.2em var(--ff);
+  --h2: bold italic clamp(1rem, calc(5vw + 0.5rem), 4rem) var(--ff);
   --h3: bold 2.25rem/1.2em var(--ff);
   --h4: bold 1.5rem/1.6em var(--ff);
   --big: 1.25rem/1.6em var(--ff);
@@ -95,6 +95,10 @@ body {
   .icon-size {
     width: var(--mi-ancho);
     height: var(--mi-alto);
+  }
+  .section-title {
+    font: var(--h2);
+    color: var(--color-dark);
   }
 }
 @layer utilities {
