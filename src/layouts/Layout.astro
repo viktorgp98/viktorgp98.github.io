@@ -25,6 +25,15 @@ import "lenis/dist/lenis.css";
     />
   </head>
   <body>
+    <div
+      class="fixed top-2 right-2 z-10 w-6 h-6 bg-grey dark:bg-light-grey rounded-full shadow-lg overflow-hidden"
+    >
+      <button
+        id="toggle-theme"
+        class="cursor-pointer object-cover w-full h-full text-light-grey icon-[ph--moon-duotone] dark:icon-[ph--sun-dim-duotone] dark:text-grey dark:w-full dark:h-full"
+      ></button>
+    </div>
+
     <main>
       <slot />
     </main>
@@ -95,19 +104,31 @@ import "lenis/dist/lenis.css";
         yPercent: 100,
         ease: "none",
       });
+
+      /* Toggle theme */
+      const themeToggle = document.getElementById("toggle-theme");
+      const htmlElement = document.documentElement;
+
+      themeToggle?.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark");
+        const newTheme = htmlElement.classList.contains("dark")
+          ? "dark"
+          : "light";
+        console.log(`Theme changed to ${newTheme}`);
+      });
     </script>
   </body>
-</html>
 
-<link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css" />
-<style>
-  html,
-  body {
-    margin: 0px;
-    width: 100%;
-    height: 100%;
-  }
-  main {
-    min-height: 100vh;
-  }
-</style>
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css" />
+  <style>
+    html,
+    body {
+      margin: 0px;
+      width: 100%;
+      height: 100%;
+    }
+    main {
+      min-height: 100vh;
+    }
+  </style>
+</html>
