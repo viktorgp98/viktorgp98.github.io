@@ -1,19 +1,89 @@
 ---
-/* import { getCollection } from "astro:content";
-
-const experience = await getCollection("experience");
-console.log("algo", experience); */
+import { EXPERIENCES } from "@/consts/experiences";
+import { Image } from "astro:assets";
+import { useState } from "react";
+const colorVariants: any = {
+  green: "border-[#5dc252]",
+  blue: "border-[#1991da]",
+  white: "border-white",
+};
+const icons: any = {
+  mssql: "icon-[devicon--microsoftsqlserver-wordmark]",
+  react: "icon-[material-icon-theme--react]",
+  nodejs: "icon-[material-icon-theme--nodejs]",
+  javascript: "icon-[material-icon-theme--javascript]",
+  wordpress: "icon-[mdi--wordpress]",
+  html: "icon-[material-icon-theme--html]",
+  css: "icon-[material-icon-theme--css]",
+};
 ---
 
 <section
   id="experience"
-  class="section relative secc-experience bg-primary-light h-screen"
+  class="section relative secc-experience bg-primary-light dark:bg-grey min-h-screen py-10"
 >
-  <div class="container mx-auto p-5 md:p-10">
-    <!-- <h2
-      class="text-[clamp(1rem, calc(5vw + .6rem), 4rem)] font-bold italic text-shadow-md uppercase"
-    > -->
-    <h2 class="section-title uppercase">Experience /</h2>
-    <div></div>
+  <div class="container mx-auto p-5 flex flex-col gap-10 md:p-10">
+    <h2 class="section-title text-grey dark:text-light-grey uppercase">
+      Experience /
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {
+        EXPERIENCES.map((experience, i) => (
+          <div class="experience-card bg-light-grey dark:bg-grey-light shadow-lg p-5 rounded-lg relative">
+            {/* icon */}
+            <div
+              class={`experience-image shadow-xl bg-light-grey absolute inset-y-2 -left-3 rounded-full overflow-hidden border-3 ${colorVariants[experience.color]} w-12 h-12`}
+            >
+              <Image
+                src={experience.image}
+                alt={experience.id}
+                width={60}
+                height={60}
+                class="w-full h-full object-cover "
+              />
+            </div>
+            {/* content */}
+            <div class="experience-content pl-8">
+              {/* title */}
+              <h3 class="text-xl font-bold text-primary">{experience.title}</h3>
+              {/* company */}
+              <p class="text-gray-700 dark:text-gray-300">
+                {experience.company}
+              </p>
+              {/* location */}
+              <div class="flex flex-row items-center gap-2 text-gray-600 dark:text-gray-400">
+                <span
+                  class="icon-[ci--location]"
+                  role="img"
+                  aria-hidden="true"
+                />
+                <p class="italic">{experience.location}</p>
+              </div>
+              {/* date */}
+              <div class="flex flex-row items-center gap-2 text-gray-500 dark:text-gray-400 ">
+                <span class="icon-[uiw--date]" role="img" aria-hidden="true" />
+                <p class="">{`${experience.start} - ${experience.end ?? "Actualidad"}`}</p>
+              </div>
+              {/* description */}
+              <p class="mt-2 dark:text-light-grey">{experience.description}</p>
+              {/* tech stack */}
+              <div class="flex flex-row flex-wrap gap-2 gap-y-2 pt-5">
+                {experience.techStack.map((tech: any) => (
+                  <div class="flex flex-row items-center gap-1 border-1 p-1 w-auto shadow-sm text-gray-500 dark:text-gray-300 rounded-md">
+                    <span
+                      class={`${icons[tech.name]} text-2xl`}
+                      role="img"
+                      aria-hidden="true"
+                    />
+                    <p class="">{tech.name}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </section>
