@@ -11,12 +11,12 @@ export const EXPERIENCES = [
     description:
       "Encargado de desarrollo de más de 10 módulos para sistema de proceso de tratado de semillas y hortazilas. Utilizando React, NodeJS y MSSQL",
     // techStack:['react', 'nodejs', 'mssql'],
-    techStack:[{name:'react'},{name:'nodejs'},{name:'mssql'},],
+    techStack:[{name:'react'},{name:'nodejs'},{name:'mssql'},{name:'expressjs'},],
   },
   {
     id: "gamersup",
     color: "blue",
-    company: "Semillas Altue",
+    company: "Gamers Up SPA",
     location: "Rancagua, Chile",
     title: "Administrador",
     image: "/images/logos/gamersup-logo.webp",
@@ -33,7 +33,7 @@ online y mayoristas.
   {
     id: "bigbuda",
     color: "white",
-    company: "Semillas Altue",
+    company: "Bigbuda Inc.",
     location: "Las Condes, Chile (Remoto)",
     title: "Web Developer (trainee)",
     image: "/images/logos/bigbuda-logo.webp",
