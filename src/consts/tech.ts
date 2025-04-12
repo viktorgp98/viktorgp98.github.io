@@ -1,36 +1,66 @@
 export const TECHS = [
-    {frontend:[{
-        id:"react",
-        name:"React",
+    {
+      name: "frontend",
+      techs: [
+        {
+          id: "react",
+          name: "React.js",
+        },
+        {
+          id: "astro",
+          name: "Astro.js",
+        },
+        {
+          id: "css",
+          name: "CSS",
+        },
+        {
+          id: "tailwind",
+          name: "Tailwind",
+        },
+      ],
     },
     {
-        id:"astro",
-        name:"Astro",
+      name: "backend",
+      techs: [
+        {
+          id: "javascript",
+          name: "JavaScript",
+        },
+        {
+          id: "expressjs",
+          name: "Express",
+        },
+        {
+          id: "python",
+          name: "Python",
+        },
+        {
+          id: "nodejs",
+          name: "NodeJS",
+        },
+        {
+          id: "php",
+          name: "PHP",
+        },
+      ],
     },
     {
-        id:"css",
-        name:"CSS",
+      name: "db & servicios",
+      techs: [
+          {
+            id: "mssql",
+            name: "MSSQL",
+          },
+        {
+          id: "firebase",
+          name: "Firebase",
+        },
+        {
+          id: "mysql",
+          name: "MySQL",
+        },
+        {id:"git", name:"Git"},{id:"wordpress", name:"Wordpress"},
+      ],
     },
-    {
-        id:"tailwind",
-        name:"Tailwind",
-    }
-    ,],
-    backend:[{
-        id:"nodejs",
-        name:"NodeJS",
-    },
-    {
-        id:"mssql",
-        name:"MSSQL",
-    },
-    {
-        id:"expressjs",
-        name:"Express",
-    },
-    {
-        id:"tailwind",
-        name:"Tailwind",
-    }]
-    },
-]
+  ];
