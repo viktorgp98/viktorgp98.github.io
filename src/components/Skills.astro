@@ -1,11 +1,64 @@
-<section id="skills" class="section secc-skills bg-primary h-screen relative">
-  <div class="container mx-auto p-5 md:p-10 z-20">
-    <h2 class="section-title uppercase">Skills</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod soluta
-      impedit eos quas, non dignissimos accusamus, exercitationem provident
-      voluptatum similique ad aut ab corrupti ipsum voluptatibus aliquid facilis
-      nam optio.
-    </p>
+---
+import { TECHS } from "@/consts/tech.ts";
+const icons: any = {
+  react: "icon-[logos--react]",
+  javascript: "icon-[logos--javascript]",
+  html: "icon-[logos--html-5]",
+  css: "icon-[logos--css-3]",
+  tailwindcss: "icon-[logos--tailwindcss-icon]",
+  bootstrap: "icon-[logos--bootstrap]",
+  nodejs: "icon-[logos--nodejs]",
+  express: "icon-[logos--express]",
+  mongodb: "icon-[logos--mongodb]",
+  mysql: "icon-[logos--mysql]",
+  astro: "icon-[devicon--astro]",
+  tailwind: "icon-[mdi--tailwind]",
+  expressjs: "icon-[lineicons--expressjs]",
+  wordpress: "icon-[mdi--wordpress]",
+  mssql: "icon-[devicon--microsoftsqlserver-wordmark]",
+};
+---
+
+<section
+  id="skills"
+  class="section secc-skills bg-primary-light dark:bg-dark-light h-screen relative"
+>
+  <div class="container mx-auto p-5 md:p-10 z-20 py-10 flex flex-col gap-8">
+    <h2 class="section-title uppercase dark:text-light text-center">
+      Skills /
+    </h2>
+    <div class="flex flex-col gap-1">
+      <h3>Frontend:</h3>
+      <div class="flex flex-row flex-wrap gap-2">
+        {
+          TECHS.map((category) =>
+            category.frontend.map((tech) => (
+              <div class="flex flex-col items-center justify-center gap-2 border-1 border-dark w-20 h-auto mx-auto p-2 flex-wrap">
+                <span class={icons[tech.id]} role="img" aria-hidden="true" />
+                <p class="text-center">{tech.name}</p>
+              </div>
+            ))
+          )
+        }
+      </div>
+    </div>
+    <div>
+      <h3>Backend</h3>
+      <div class="flex flex-row flex-wrap gap-2">
+        {
+          TECHS.map((category) =>
+            category.backend.map((tech) => (
+              <div class="flex flex-col items-center justify-center gap-2 border-1 border-dark w-20 h-auto mx-auto p-2 flex-wrap">
+                <span class={icons[tech.id]} role="img" aria-hidden="true" />
+                <p class="text-center">{tech.name}</p>
+              </div>
+            ))
+          )
+        }
+      </div>
+    </div>
+    <div>
+      <h3>DB y servicios</h3>
+    </div>
   </div>
 </section>
