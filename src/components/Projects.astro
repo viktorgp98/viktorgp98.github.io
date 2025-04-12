@@ -4,32 +4,38 @@ import { Image } from "astro:assets";
 
 <section
   id="projects"
-  class="section secc-projects min-h-screen bg-primary dark:bg-dark relative"
+  class="section secc-projects min-h-screen py-10 bg-primary dark:bg-dark relative"
 >
-  <div class="container mx-auto p-5 md:p-10 py-10 flex flex-col gap-8">
+  <div class="container mx-auto p-5 md:p-10 py-10">
     <div>
-      <h2 class="section-title uppercase text-center dark:text-primary">
+      <h2
+        class="section-title uppercase text-center md:text-left dark:text-primary"
+      >
         Proyectos seleccionados /
       </h2>
     </div>
-    <div class="grid grid-cols-4 grid-rows-7 gap-5">
-      <div class="col-span-2 row-span-4 bg-secondary">
+    <div
+      class="flex flex-col md:grid grid-cols-4 md:grid-cols-4 grid-rows-7 gap-7"
+    >
+      <div class="col-span-2 row-span-4 bg-light">
         <Image
           class="grayscale hover:grayscale-0 transition-all duration-200"
           src="https://picsum.photos/600/400?random=2"
           alt="random"
           inferSize={true}
         />
+        1
       </div>
-      <div class="col-span-2 row-span-3 col-start-3 bg-secondary">
+      <div class="col-span-2 row-span-3 col-start-1 row-start-5 bg-light">
         <Image
           class="grayscale hover:grayscale-0 transition-all duration-200"
           src="https://picsum.photos/600/400?random=1"
           alt="random"
           inferSize={true}
         />
+        2
       </div>
-      <div class="col-span-2 row-span-4 col-start-3 row-start-4 bg-secondary">
+      <div class="col-span-2 row-span-3 col-start-3 row-start-1 bg-light">
         <Image
           class="grayscale hover:grayscale-0 transition-all duration-200"
           src="https://picsum.photos/600/400?random=3"
@@ -37,7 +43,7 @@ import { Image } from "astro:assets";
           inferSize={true}
         />
       </div>
-      <div class="col-span-2 row-span-3 row-start-5 bg-secondary">
+      <div class="col-span-2 row-span-4 col-start-3 row-start-4 bg-light">
         <Image
           class="grayscale hover:grayscale-0 transition-all duration-200"
           src="https://picsum.photos/600/400?random=5"
