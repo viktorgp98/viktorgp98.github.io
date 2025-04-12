@@ -1,64 +1,59 @@
 ---
 import { TECHS } from "@/consts/tech.ts";
 const icons: any = {
-  react: "icon-[logos--react]",
-  javascript: "icon-[logos--javascript]",
+  php: "icon-[fa6-brands--php]",
+  react: "icon-[lineicons--react]",
+  javascript: "icon-[lineicons--javascript]",
   html: "icon-[logos--html-5]",
-  css: "icon-[logos--css-3]",
+  css: "icon-[lineicons--css3]",
   tailwindcss: "icon-[logos--tailwindcss-icon]",
   bootstrap: "icon-[logos--bootstrap]",
-  nodejs: "icon-[logos--nodejs]",
+  nodejs: "icon-[lineicons--nodejs-alt]",
   express: "icon-[logos--express]",
   mongodb: "icon-[logos--mongodb]",
-  mysql: "icon-[logos--mysql]",
-  astro: "icon-[devicon--astro]",
-  tailwind: "icon-[mdi--tailwind]",
+  astro: "icon-[lineicons--astro]",
+  tailwind: "icon-[lineicons--tailwindcss]",
   expressjs: "icon-[lineicons--expressjs]",
   wordpress: "icon-[mdi--wordpress]",
-  mssql: "icon-[devicon--microsoftsqlserver-wordmark]",
+  mssql: "icon-[devicon-plain--microsoftsqlserver-wordmark]",
+  python: "icon-[lineicons--python]",
+  firebase: "icon-[lineicons--firebase]",
+  mysql: "icon-[lineicons--mysql]",
+  git: "icon-[lineicons--git]",
 };
 ---
 
 <section
   id="skills"
-  class="section secc-skills bg-primary-light dark:bg-dark-light h-screen relative"
+  class="section secc-skills bg-primary-light dark:bg-dark-light min-h-auto relative"
 >
-  <div class="container mx-auto p-5 md:p-10 z-20 py-10 flex flex-col gap-8">
-    <h2 class="section-title uppercase dark:text-light text-center">
+  <div class="container mx-auto p-5 md:p-10 z-20 py-15 flex flex-col gap-8">
+    <h2
+      class="section-title uppercase dark:text-light text-center md:text-left"
+    >
       Skills /
     </h2>
-    <div class="flex flex-col gap-1">
-      <h3>Frontend:</h3>
-      <div class="flex flex-row flex-wrap gap-2">
-        {
-          TECHS.map((category) =>
-            category.frontend.map((tech) => (
-              <div class="flex flex-col items-center justify-center gap-2 border-1 border-dark w-20 h-auto mx-auto p-2 flex-wrap">
-                <span class={icons[tech.id]} role="img" aria-hidden="true" />
+
+    {
+      TECHS.map((category) => (
+        <div class="flex flex-col gap-1">
+          <h3 class="  capitalize dark:text-primary font-bold">
+            {category.name}:
+          </h3>
+          <div class="flex flex-row flex-wrap gap-2 ">
+            {category.techs.map((tech) => (
+              <div class="flex flex-row items-center gap-1 border-1 border-dark dark:border-gray-400 w-auto h-auto p-2 shadow-md dark:text-light dark:bg-dark-light bg-light rounded-md">
+                <span
+                  class={`${icons[tech.id]} w-6 h-6 `}
+                  role="img"
+                  aria-hidden="true"
+                />
                 <p class="text-center">{tech.name}</p>
               </div>
-            ))
-          )
-        }
-      </div>
-    </div>
-    <div>
-      <h3>Backend</h3>
-      <div class="flex flex-row flex-wrap gap-2">
-        {
-          TECHS.map((category) =>
-            category.backend.map((tech) => (
-              <div class="flex flex-col items-center justify-center gap-2 border-1 border-dark w-20 h-auto mx-auto p-2 flex-wrap">
-                <span class={icons[tech.id]} role="img" aria-hidden="true" />
-                <p class="text-center">{tech.name}</p>
-              </div>
-            ))
-          )
-        }
-      </div>
-    </div>
-    <div>
-      <h3>DB y servicios</h3>
-    </div>
+            ))}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>
