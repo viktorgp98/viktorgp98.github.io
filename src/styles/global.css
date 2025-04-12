@@ -29,19 +29,14 @@
 }
 @theme {
   /* COLOR LIGHTMode */
+  --color-primary-light: rgb(240, 167, 209);
+  --color-primary: #f780c9;
+  --color-light: #f2f2f2;
 
   /* COLOR DARKMode */
-  --color-primary-light: rgb(240, 167, 209);
-  /* --color-primary: #f57fc4; */
-  --color-primary: #f780c9;
-
-  --color-secondary: #d9d9d9;
+  --color-dark-light: #262626;
   --color-dark: #141513;
-  --color-grey-light: #262626;
-  --color-grey: #0e0e0e;
-  --color-light-grey: #f2f2f2;
 
-  --font-title: "Clash Display", "Clash Display Placeholder", sans-serif;
   --bd-color: rgba(217, 217, 217, 0.5);
 
   --mi-ancho: 2.2rem;
