@@ -1,0 +1,36 @@
+export const TECHS = [
+    {frontend:[{
+        id:"react",
+        name:"React",
+    },
+    {
+        id:"astro",
+        name:"Astro",
+    },
+    {
+        id:"css",
+        name:"CSS",
+    },
+    {
+        id:"tailwind",
+        name:"Tailwind",
+    }
+    ,],
+    backend:[{
+        id:"nodejs",
+        name:"NodeJS",
+    },
+    {
+        id:"mssql",
+        name:"MSSQL",
+    },
+    {
+        id:"expressjs",
+        name:"Express",
+    },
+    {
+        id:"tailwind",
+        name:"Tailwind",
+    }]
+    },
+]
