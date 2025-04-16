@@ -13,11 +13,11 @@ import { Image } from "astro:assets";
       Sobre mi /
     </h2>
     <div
-      class="card border-2 dark:border-primary rounded-xl shadow-lg bg-light dark:bg-dark-light"
+      class="card border-1 dark:border-primary rounded-xl shadow-lg bg-light dark:bg-dark-light flex flex-col md:flex-row"
     >
-      <div class="image rounded-xl">
+      <div class="image rounded-xl overflow-hidden md:w-1/2">
         <Image
-          class="grayscale hover:grayscale-0 transition-all duration-200 rounded-sm"
+          class="grayscale hover:grayscale-0 transition-all duration-200 rounded-sm w-full h-full object-cover"
           src="/images/viktor_pic.webp"
           alt="Una imagen de Viktor González Pinto"
           width={500}
@@ -25,25 +25,30 @@ import { Image } from "astro:assets";
         />
       </div>
       <div
-        class="content rounded-xl p-2 flex flex-col gap-4 text-dark dark:text-light"
+        class="content rounded-xl p-2 flex flex-col gap-4 text-dark dark:text-light md:w-1/2 md:p-10 md:text-wrap"
       >
         <p>
-          Soy Viktor González Pinto (si, Viktor con K 🤓). Desarrollador
-          Fullstack Jr innovador y creativo. Mi interés por la informática
-          surgió de niño, aprendiendo autodidactamente.Esta pasión me llevó a
-          ser Técnico Nivel Superior en Análisis Programador.
+          Soy Viktor González Pinto (sí, con K! 🤓), un Desarrollador Fullstack
+          Jr. de Chile. Mi pasión por la informática nació desde muy joven,
+          explorando el mundo de la informática a través del aprendizaje
+          autodidacta y los videojuegos, un camino que se solidificó con mi
+          título como Técnico Nivel Superior Analista Programador.
         </p>
         <p>
-          Mis habilidades principales incluyen JavaScript, ReactJS, NodeJS y
-          bases de datos como MSSQL. Con cerca de un año de experiencia,
-          participé en el desarrollo de un sistema de tratado de semillas para
-          Semillas Altue (ReactJS, NodeJS, MSSQL), un proyecto colaborativo
-          donde apliqué conocimientos y afronté desafíos técnicos en equipo.
+          Con un año de experiencia, uno de mis mayores desafíos fue participar
+          activamente en el desarrollo de un sistema de tratado de semillas para
+          Semillas Altue. En este proyecto colaborativo, apliqué mis
+          conocimientos en JavaScript, PHP, ReactJS, NodeJS y MSSQL, siendo
+          fundamental en el desarrollo de más de 10 módulos clave para el
+          funcionamiento del sistema.
         </p>
         <p>
-          Me esfuerzo por mejorar e innovar en cada proyecto, buscando
-          soluciones eficientes. Mi meta es seguir creciendo en el desarrollo
-          web/software, aportando un estilo único y marcando diferencia.
+          Mi enfoque en cada proyecto se centra en la mejora continua y la
+          búsqueda de soluciones eficientes, aportando una perspectiva
+          innovadora y un sello personal a cada línea de código. Mi meta es
+          seguir creciendo en el desarrollo web/software, no solo dominando
+          nuevas tecnologías, sino también marcando la diferencia con un estilo
+          de trabajo proactivo y creativo.
         </p>
       </div>
     </div>
