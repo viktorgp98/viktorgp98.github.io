@@ -1,25 +1,31 @@
 ---
 import { TECHS } from "@/consts/tech.ts";
+import { log } from "node_modules/astro/dist/core/logger/core";
 const icons: any = {
-  php: "icon-[fa6-brands--php]",
-  react: "icon-[lineicons--react]",
-  javascript: "icon-[lineicons--javascript]",
+  php: "icon-[fa6-brands--php] group-hover:icon-[devicon--php] group-hover:w-6 group-hover:h-6",
+  react: "icon-[lineicons--react] group-hover:text-[#58C4DC]",
+  javascript: "icon-[lineicons--javascript] group-hover:text-[#F0DB4F]",
   html: "icon-[logos--html-5]",
-  css: "icon-[lineicons--css3]",
-  tailwindcss: "icon-[logos--tailwindcss-icon]",
+  css: "icon-[lineicons--css3] group-hover:text-[#0277bd]",
+  tailwind:
+    "icon-[ri--tailwind-css-fill] group-hover:icon-[devicon--tailwindcss] group-hover:w-6 group-hover:h-6",
   bootstrap: "icon-[logos--bootstrap]",
-  nodejs: "icon-[lineicons--nodejs-alt]",
-  express: "icon-[logos--express]",
-  mongodb: "icon-[logos--mongodb]",
-  astro: "icon-[lineicons--astro]",
-  tailwind: "icon-[lineicons--tailwindcss]",
+  nodejs:
+    "icon-[lineicons--nodejs-alt] group-hover:icon-[devicon--nodejs] group-hover:w-6 group-hover:h-6",
+  astro:
+    "icon-[lineicons--astro] group-hover:icon-[devicon--astro] group-hover:w-6 group-hover:h-6",
+
   expressjs: "icon-[lineicons--expressjs]",
-  wordpress: "icon-[mdi--wordpress]",
-  mssql: "icon-[devicon-plain--microsoftsqlserver-wordmark]",
-  python: "icon-[lineicons--python]",
-  firebase: "icon-[lineicons--firebase]",
-  mysql: "icon-[lineicons--mysql]",
-  git: "icon-[lineicons--git]",
+  wordpress: "icon-[mdi--wordpress] group-hover:text-[#0073AA]",
+  mssql:
+    "icon-[devicon-plain--microsoftsqlserver-wordmark] group-hover:text-[#a91d22]",
+  python:
+    "icon-[lineicons--python] group-hover:icon-[material-icon-theme--python] group-hover:w-6 group-hover:h-6",
+  firebase:
+    "icon-[lineicons--firebase] group-hover:w-6 group-hover:h-6 group-hover:icon-[devicon--firebase]",
+  mysql:
+    "icon-[lineicons--mysql] gruop-hover:icon-[devicon--mysql] group-hover:w-6 group-hover:h-6",
+  git: "icon-[lineicons--git] group-hover:text-[#F34F29]",
 };
 ---
 
@@ -27,7 +33,9 @@ const icons: any = {
   id="skills"
   class="section secc-skills bg-primary-light dark:bg-dark-light min-h-auto relative"
 >
-  <div class="container mx-auto p-5 md:p-10 z-20 py-15 flex flex-col gap-8">
+  <div
+    class="container mx-auto p-5 md:p-10 md:py-20 z-20 py-15 flex flex-col gap-8"
+  >
     <h2
       class="section-title uppercase dark:text-light text-center md:text-left"
     >
@@ -42,9 +50,13 @@ const icons: any = {
           </h3>
           <div class="flex flex-row flex-wrap gap-2 ">
             {category.techs.map((tech) => (
-              <div class="flex flex-row items-center gap-1 border-1 border-dark dark:border-gray-400 w-auto h-auto p-2 shadow-md dark:text-light dark:bg-dark-light bg-light rounded-md">
+              <div
+                class="group cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out
+                      flex flex-row items-center gap-1 border-1 border-dark dark:border-gray-400 w-auto h-auto 
+                      p-2 shadow-md dark:text-light dark:bg-dark-light bg-light rounded-md"
+              >
                 <span
-                  class={`${icons[tech.id]} w-6 h-6 `}
+                  class={`${icons[tech.id]} w-6 h-6`}
                   role="img"
                   aria-hidden="true"
                 />
