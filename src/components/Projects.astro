@@ -19,16 +19,18 @@ import { Image } from "astro:assets";
     >
       <div class="col-span-2 row-span-4 bg-light">
         <Image
-          class="grayscale hover:grayscale-0 transition-all duration-200"
+          class="grayscale hover:grayscale-0 transition-all duration-200 overflow-hidden w-full h-full"
           src="https://picsum.photos/600/400?random=2"
           alt="random"
           inferSize={true}
         />
         1
       </div>
-      <div class="col-span-2 row-span-3 col-start-1 row-start-5 bg-light">
+      <div
+        class="col-span-2 row-span-3 col-start-1 row-start-5 bg-light overflow-hidden"
+      >
         <Image
-          class="grayscale hover:grayscale-0 transition-all duration-200"
+          class="grayscale cursor-pointer hover:grayscale-0 hover:scale-110 transition-all duration-400 object-cover w-full h-full"
           src="https://picsum.photos/600/400?random=1"
           alt="random"
           inferSize={true}
@@ -37,7 +39,7 @@ import { Image } from "astro:assets";
       </div>
       <div class="col-span-2 row-span-3 col-start-3 row-start-1 bg-light">
         <Image
-          class="grayscale hover:grayscale-0 transition-all duration-200"
+          class="grayscale hover:grayscale-0 transition-all duration-200 overflow-hidden w-full h-full"
           src="https://picsum.photos/600/400?random=3"
           alt="randome"
           inferSize={true}
@@ -45,7 +47,7 @@ import { Image } from "astro:assets";
       </div>
       <div class="col-span-2 row-span-4 col-start-3 row-start-4 bg-light">
         <Image
-          class="grayscale hover:grayscale-0 transition-all duration-200"
+          class="grayscale hover:grayscale-0 transition-all duration-200 overflow-hidden w-full h-full"
           src="https://picsum.photos/600/400?random=5"
           alt="random"
           inferSize={true}
