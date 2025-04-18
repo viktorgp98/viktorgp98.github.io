@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+const { id, title, image, techstack } = Astro.props;
+---
+
+<div class="bg-gray-100 flex h-full w-full client:only">
+  <div class="relative group h-full w-full">
+    {/* Project Image */}
+    <div class="relative overflow-hidden h-full w-full">
+      <Image
+        src={image}
+        alt=`Imagen del proyecto ${title}`
+        inferSize={true}
+        data-id={id}
+        class="project-image w-full h-full object-cover transform transition-transform duration-400 group-hover:scale-110 grayscale group-hover:grayscale-0 overflow-hidden"
+      />
+
+      {/* Mobile Info Button */}
+      <button
+        class="btn-info absolute flex top-3 right-3 z-10 p-2 bg-black/50 rounded-full w-8 h-8 items-center justify-center text-white md:hidden cursor-pointer"
+        data-id={id}
+      >
+        <span class="icon-[lucide--info]" role="img" aria-hidden="true"></span>
+      </button>
+
+      {/* Hover Card */}
+      <div
+        class={`project-card  absolute inset-0 bg-gradient-to-t 
+        from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+        flex flex-col justify-end p-6`}
+        data-id={id}
+      >
+        <h3 class="text-white text-2xl font-bold mb-2">
+          {title ? title : "Undercontruction"}
+        </h3>
+        <p class="text-gray-200 text-sm mb-4">
+          A beautiful web application built with React and TailwindCSS. Features
+          modern design patterns and responsive layouts.
+        </p>
+
+        {/* Tech Stack */}
+        <div class="flex gap-2 mb-4">
+          {
+            techstack ? (
+              techstack.map((tech: any) => {
+                return (
+                  <span class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
+                    {tech}
+                  </span>
+                );
+              })
+            ) : (
+              <span class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
+                React
+              </span>
+            )
+          }
+        </div>
+
+        {/* Links */}
+        <div class="flex gap-4">
+          <a
+            href="#"
+            class="text-white hover:text-blue-400 transition-colors duration-200 flex items-center gap-1"
+          >
+            <span
+              class="icon-[mdi--github] w-6 h-6"
+              role="img"
+              aria-hidden="true"></span>
+            Code
+          </a>
+          <a
+            href="#"
+            class="text-white hover:text-blue-400 transition-colors duration-200 flex items-center gap-1"
+          >
+            <span
+              class="icon-[gg--external] w-7 h-7"
+              role="img"
+              aria-hidden="true"></span>
+            Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnInfo = document.querySelectorAll(".btn-info");
+    const projectCard = document.querySelectorAll(".project-card");
+    const projectImages = document.querySelectorAll(".project-image");
+    btnInfo.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-id");
+        projectCard.forEach((card) => {
+          if (card.getAttribute("data-id") === id) {
+            card.classList.toggle("opacity-0");
+            card.classList.toggle("opacity-100");
+          } else {
+            card.classList.add("opacity-0");
+            card.classList.remove("opacity-100");
+          }
+        });
+        projectImages.forEach((image) => {
+          if (image.getAttribute("data-id") === id) {
+            image.classList.toggle("grayscale");
+            image.classList.toggle("group-hover:grayscale-0");
+          } else {
+            image.classList.add("grayscale");
+            image.classList.remove("group-hover:grayscale-0");
+          }
+        });
+      });
+    });
+  });
+</script>
