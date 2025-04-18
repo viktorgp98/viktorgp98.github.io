@@ -5,7 +5,7 @@ const socials = [
     title: "CV",
     link: "/documents/CV-ViktorGonzalez-2025.pdf",
     download: "cv_viktorgonzalez.pdf",
-    icon: "icon-[tabler--file-cv-filled]",
+    icon: "icon-[pepicons-print--cv]",
   },
   {
     id: "footer-linkedin-icon",
@@ -20,23 +20,34 @@ const socials = [
     icon: "icon-[ph--github-logo-duotone]",
   },
 ];
+
+const techs = [
+  {
+    id: "tailwind",
+    icon: "icon-[ri--tailwind-css-fill]",
+  },
+  {
+    id: "astro",
+    icon: "icon-[lineicons--astro]",
+  },
+];
 ---
 
-<footer
-  class="w-full p-5 md:p-10 bg-dark border-bd-color border-t-1 text-white"
->
+<footer class="w-full bg-dark border-bd-color border-t-1 text-white">
   <div
-    class="container mx-auto flex flex-row justify-between items-center md:px-10"
+    class="container mx-auto justify-between items-center py-10 flex flex-col md:flex-row space-y-4 md:space-y-0 relative"
   >
     <div class="footer-content">
       <p class="text-white">Desarrollado 💻 por Viktor Gonzalez P.</p>
     </div>
-    <div class="social-links flex md:flex-row flex-col gap-x-5 md:gap-x-10">
+    <div
+      class="social-links items-center flex md:flex-row flex-row gap-4 md:-ml-30"
+    >
       {
         socials.map((social) => {
           return (
             <a
-              class="w-[100px] flex flex-row items-center justify-center"
+              class=" flex flex-row items-center justify-center"
               href={social.link}
               download={social.download}
               target="_blank"
@@ -52,6 +63,22 @@ const socials = [
           );
         })
       }
+    </div>
+    <div class="tech md:flex flex-row gap-x-2 hidden">
+      <p>Construido con:</p>
+      <div class="flex flex-row gap-3 items-center">
+        {
+          techs.map((tech) => {
+            return (
+              <span
+                class={`${tech.icon} w-6 h-6 text-primary`}
+                role="img"
+                aria-hidden="true"
+              />
+            );
+          })
+        }
+      </div>
     </div>
   </div>
 </footer>
