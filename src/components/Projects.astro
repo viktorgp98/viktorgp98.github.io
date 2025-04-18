@@ -1,6 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import HoverCard from "@/components/HoverCard";
+import HoverCard from "@/components/HoverCard.astro";
 ---
 
 <section
@@ -16,26 +15,28 @@ import HoverCard from "@/components/HoverCard";
     <div
       class="flex flex-col md:grid grid-cols-4 md:grid-cols-4 grid-rows-7 gap-7"
     >
-      <div class="col-span-2 row-span-4 bg-light">
+      <div class="col-span-2 row-span-4 bg-light shadow-lg">
         <HoverCard
           id="1"
-          title="Mamahuevo"
+          title="Prueba 1"
           image="https://picsum.photos/600/400?random=2"
         />
       </div>
       <div
-        class="col-span-2 row-span-3 col-start-1 row-start-5 bg-light overflow-hidden"
+        class="col-span-2 row-span-3 col-start-1 row-start-5 bg-light overflow-hidden shadow-lg"
       >
         <HoverCard id="2" image="https://picsum.photos/600/400?random=1" />
       </div>
-      <div class="col-span-2 row-span-3 col-start-3 row-start-1 bg-light">
+      <div
+        class="col-span-2 row-span-3 col-start-3 row-start-1 bg-light shadow-lg"
+      >
         <HoverCard id="3" image="https://picsum.photos/600/400?random=3" />
       </div>
-      <div class="col-span-2 row-span-4 col-start-3 row-start-4 bg-light">
+      <div
+        class="col-span-2 row-span-4 col-start-3 row-start-4 bg-light shadow-lg"
+      >
         <HoverCard id="4" image="https://picsum.photos/600/400?random=5" />
       </div>
     </div>
   </div>
-
-  <!-- mockups de proyectos en escritorio y telefono seleccionables? -->
 </section>
