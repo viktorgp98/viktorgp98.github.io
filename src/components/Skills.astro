@@ -1,6 +1,6 @@
 ---
 import { TECHS } from "@/consts/tech.ts";
-import { log } from "node_modules/astro/dist/core/logger/core";
+
 const icons: any = {
   php: "icon-[fa6-brands--php] group-hover:icon-[devicon--php] group-hover:w-6 group-hover:h-6",
   react: "icon-[lineicons--react] group-hover:text-[#58C4DC]",
@@ -39,7 +39,7 @@ const icons: any = {
     <h2
       class="section-title uppercase dark:text-light text-center md:text-left"
     >
-      Skills /
+      Habilidades /
     </h2>
 
     {
@@ -49,23 +49,57 @@ const icons: any = {
             {category.name}:
           </h3>
           <div class="flex flex-row flex-wrap gap-2 ">
-            {category.techs.map((tech) => (
-              <div
-                class="group cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out
-                      flex flex-row items-center gap-1 border-1 border-dark dark:border-gray-400 w-auto h-auto 
-                      p-2 shadow-md dark:text-light dark:bg-dark-light bg-light rounded-md"
-              >
-                <span
-                  class={`${icons[tech.id]} w-6 h-6`}
-                  role="img"
-                  aria-hidden="true"
-                />
-                <p class="text-center">{tech.name}</p>
-              </div>
-            ))}
+            {category.techs.map((tech) => {
+              return (
+                <div
+                  class="group cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out
+             flex flex-row items-center gap-1 border-1 border-dark dark:border-gray-400 w-auto h-auto 
+             p-2 shadow-md dark:text-light dark:bg-dark-light bg-light rounded-md"
+                  data-id={tech.id}
+                >
+                  <span
+                    class={`w-6 h-6 ${icons[tech.id]}`}
+                    role="img"
+                    aria-hidden="true"
+                  />
+                  <p class="text-center">{tech.name}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       ))
     }
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const techItems = document.querySelectorAll("[data-id]");
+    let activeId: any = null;
+
+    techItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        const id = (item as HTMLElement).dataset.id;
+
+        if (activeId && activeId !== id) {
+          const prevActive = document.querySelector(`[data-id='${activeId}']`);
+          prevActive?.classList.remove("hover-sim");
+        }
+
+        if (activeId === id) {
+          item.classList.remove("hover-sim");
+          activeId = null;
+        } else {
+          item.classList.add("hover-sim");
+          activeId = id;
+
+          setTimeout(() => {
+            item.classList.remove("hover-sim");
+            if (activeId === id) activeId = null;
+          }, 1000);
+        }
+      });
+    });
+  });
+</script>
