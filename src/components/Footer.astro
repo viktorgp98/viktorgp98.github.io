@@ -35,13 +35,13 @@ const techs = [
 
 <footer class="w-full bg-dark border-bd-color border-t-1 text-white">
   <div
-    class="container mx-auto justify-between items-center py-10 flex flex-col md:flex-row space-y-4 md:space-y-0 relative"
+    class="container mx-auto items-center py-10 flex flex-col gap-10 md:gap-60 md:flex-row space-y-4 md:space-y-0 relative lg:p-20"
   >
     <div class="footer-content">
       <p class="text-white">Desarrollado 💻 por Viktor Gonzalez P.</p>
     </div>
     <div
-      class="social-links items-center flex md:flex-row flex-row gap-4 md:-ml-30"
+      class="social-links items-center flex md:flex-row flex-row gap-4 md:gap-6 lg:gap-5 lg:w-auto"
     >
       {
         socials.map((social) => {
@@ -53,7 +53,7 @@ const techs = [
               target="_blank"
             >
               <span
-                class={`${social.icon} text-primary w-1 h-6 px-5`}
+                class={`${social.icon} text-primary w-auto h-6 px-5`}
                 role="img"
                 aria-hidden="true"
                 id={social.id}
@@ -64,7 +64,7 @@ const techs = [
         })
       }
     </div>
-    <div class="tech md:flex flex-row gap-x-2 hidden">
+    <div class="tech lg:flex flex-row gap-x-2 hidden w-auto">
       <p>Construido con:</p>
       <div class="flex flex-row gap-3 items-center">
         {
