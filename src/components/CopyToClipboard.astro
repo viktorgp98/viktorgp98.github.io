@@ -19,7 +19,7 @@ const {
 <div class={`copy-to-clipboard-wrapper ${className}`}>
   <div class="relative flex items-center">
     <button
-      class="group cursor-pointer copy-button relative inline-flex items-center gap-1 py-1 text-gray-700 dark:text-gray-300 dark:hover:text-gray-100"
+      class="group cursor-pointer copy-button relative items-center gap-1 py-1 text-gray-700 dark:text-gray-300 dark:hover:text-gray-100"
       data-clipboard-text={text}
       aria-label="Copy to clipboard"
       data-clipboard-success-text={successText}
@@ -27,7 +27,7 @@ const {
       <pre class="p-4 rounded-lg overflow-x-auto">{text}</pre>
       <div
         id="label-copy"
-        class="group-hover:opacity-100 group-hover:text-primary absolute right-10 -top-2 opacity-0 text-xs"
+        class="group-hover:opacity-100 group-hover:text-dark dark:group-hover:text-primary absolute right-10 -top-2 opacity-0 text-xs"
       >
         <span
           class="icon-[icon-park-twotone--copy]"
@@ -72,14 +72,13 @@ const {
         label?.classList.add("opacity-0");
         label?.classList.remove("opacity-100");
         if (buttonTextElement) buttonTextElement.textContent = originalText;
-      }, 2000);
+      }, 1500);
 
       e.clearSelection();
     });
 
     clipboard.on("error", (e) => {
       console.error("Error al copiar al portapapeles:", e);
-      // Puedes mostrar un mensaje de error al usuario aquí
     });
   }
 
