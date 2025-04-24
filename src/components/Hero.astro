@@ -6,6 +6,7 @@ const sites = [
   {
     link: "/documents/CV-ViktorGonzalez-2025.pdf",
     title: "CV",
+    description: "Descargar CV de Viktor Gonzalez",
     icon: "icon-[pepicons-print--cv]",
     download: "cv_viktorgonzalez.pdf",
   },
@@ -13,25 +14,19 @@ const sites = [
   {
     link: "https://www.linkedin.com/in/viktorgonzalezp/",
     title: "LinkedIn",
+    description:
+      "Abrir en nueva pestaña el perfil de LinkedIn de Viktor Gonzalez",
     icon: "icon-[ph--linkedin-logo-duotone]",
   },
   {
     link: "https://github.com/viktorgp98",
     title: "Github",
+    description:
+      "Abrir en nueva pestaña el perfil de Github de Viktor Gonzalez",
     icon: "icon-[ph--github-logo-duotone]",
   },
 ];
 const pretitle = `Desarrollador { FullStack } Junior`;
-// src/components/HoraChileServidor.astro
-/* import { onMount } from 'astro:client';
-
-let horaChile = 'Cargando hora...';
-
-onMount(async () => {
-  const response = await fetch('/api/hora-chile');
-  const data = await response.json();
-  horaChile = data.hora;
-}); */
 ---
 
 <section class="section secc-hero relative h-screen w-full">
@@ -53,9 +48,9 @@ onMount(async () => {
       </div>
       <!-- titles -->
       <div class="flex flex-col gap-4 md:gap-5 items-start">
-        <h4 class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)]">
+        <h2 class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)]">
           {pretitle}
-        </h4>
+        </h2>
         <GradientText
           colors={["#d80e8a", "#f780c9", "#d80e8a", "#f780c9", "#d80e8a"]}
           animationSpeed={8}
@@ -66,7 +61,7 @@ onMount(async () => {
           </h1>
         </GradientText>
 
-        <h5 class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)] italic">
+        <h3 class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)] italic">
           +1 año de experiencia. <span class="text-primary"
             >Analista Programador
           </span>
@@ -76,7 +71,7 @@ onMount(async () => {
             aria-hidden="true"></span>
           <br />
           Apasionado por la innovacion web
-        </h5>
+        </h3>
       </div>
       <!-- enlaces  -->
       <div
@@ -87,7 +82,11 @@ onMount(async () => {
         >
           <!-- projects -->
           <HoverButton>
-            <a href="#projects" onclick="lenis.scrollTo('#projects')">
+            <a
+              class="w-full h-full relative"
+              href="#projects"
+              onclick="lenis.scrollTo('#projects')"
+            >
               Ver proyectos
             </a>
           </HoverButton>
@@ -116,7 +115,12 @@ onMount(async () => {
         >
           {
             sites.map((site) => (
-              <a href={site.link} download={site.download} target="_blank">
+              <a
+                href={site.link}
+                download={site.download}
+                target="_blank"
+                aria-label={site.description}
+              >
                 <title>{site.title}</title>
                 <span
                   class={`${site.icon} text-primary icon-size px-10 hover:scale-125 hover:bg-primary transition-all duration-200`}
@@ -132,7 +136,11 @@ onMount(async () => {
       <div
         class="absolute inset-x-0 bottom-0 top-130 md:top-140 flex flex-row gap-x-5 items-center justify-center pt-10"
       >
-        <a href="#experience" onclick="lenis.scrollTo('#experience')">
+        <a
+          href="#experience"
+          onclick="lenis.scrollTo('#experience')"
+          aria-label="Boton para desplazar a siguiente seccion"
+        >
           <title>Siguiente seccion</title>
           <span
             class="icon-[ph--arrow-circle-down-duotone] w-10 h-10 animate-[sink_1s_ease-in-out_infinite]"
