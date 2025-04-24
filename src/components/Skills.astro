@@ -34,42 +34,45 @@ const icons: any = {
   class="section secc-skills bg-primary-light dark:bg-dark-light min-h-auto relative"
 >
   <div
-    class="container mx-auto p-5 md:p-10 md:py-20 z-20 py-15 flex flex-col gap-8"
+    class="container mx-auto px-5 md:p-10 md:py-20 z-20 py-15 flex flex-col gap-8"
   >
     <h2
       class="section-title uppercase dark:text-light text-center md:text-left"
     >
       Habilidades /
     </h2>
-
-    {
-      TECHS.map((category) => (
-        <div class="flex flex-col gap-1">
-          <h3 class="  capitalize dark:text-primary font-bold">
-            {category.name}:
-          </h3>
-          <div class="flex flex-row flex-wrap gap-2 ">
-            {category.techs.map((tech) => {
-              return (
-                <div
-                  class="group cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out
-             flex flex-row items-center gap-1 border-1 border-dark dark:border-gray-400 w-auto h-auto 
+    <div
+      class="py-7 lg:py-10 flex-col flex gap-10 lg:grid lg:grid-cols-3 w-auto mx-auto space-x-5"
+    >
+      {
+        TECHS.map((category) => (
+          <div class="flex flex-col  gap-1">
+            <h3 class="  capitalize dark:text-primary font-bold">
+              {category.name}:
+            </h3>
+            <div class="flex flex-row flex-wrap gap-2 ">
+              {category.techs.map((tech) => {
+                return (
+                  <div
+                    class="group cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out
+             flex flex-row  items-center gap-1 border-1 border-dark dark:border-gray-400 lg:w-30 justify-center h-auto 
              p-2 shadow-md dark:text-light dark:bg-dark-light bg-light rounded-md"
-                  data-id={tech.id}
-                >
-                  <span
-                    class={`w-6 h-6 ${icons[tech.id]}`}
-                    role="img"
-                    aria-hidden="true"
-                  />
-                  <p class="text-center">{tech.name}</p>
-                </div>
-              );
-            })}
+                    data-id={tech.id}
+                  >
+                    <span
+                      class={`w-6 h-6 ${icons[tech.id]}`}
+                      role="img"
+                      aria-hidden="true"
+                    />
+                    <p class="text-center">{tech.name}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))
-    }
+        ))
+      }
+    </div>
   </div>
 </section>
 
