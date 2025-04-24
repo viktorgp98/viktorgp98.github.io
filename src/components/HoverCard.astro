@@ -1,6 +1,12 @@
 ---
 import { Image } from "astro:assets";
-const { id, title, image, description, techstack } = Astro.props;
+const {
+  id,
+  title = "Underconstruction",
+  image,
+  description = "Proyecto en construcción",
+  techstack,
+} = Astro.props;
 ---
 
 <div class="bg-gray-100 flex h-full w-full client:only">
@@ -9,10 +15,10 @@ const { id, title, image, description, techstack } = Astro.props;
     <div class="relative overflow-hidden h-full w-full">
       <Image
         src={image}
-        alt=`Imagen del proyecto ${title}`
+        alt={`Imagen del proyecto ${title}`}
         inferSize={true}
         data-id={id}
-        class="project-image w-full h-full object-cover transform transition-transform duration-400 group-hover:scale-110 grayscale group-hover:grayscale-0 overflow-hidden"
+        class="project-image w-full h-full object-cover transform transition-transform duration-400 group-hover:scale-110 grayscale group-hover:grayscale-0"
       />
 
       {/* Mobile Info Button */}
@@ -25,29 +31,27 @@ const { id, title, image, description, techstack } = Astro.props;
 
       {/* Hover Card */}
       <div
-        class={`project-card  absolute inset-0 bg-gradient-to-t 
-        from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 
+        class={`project-card absolute inset-0 bg-gradient-to-t
+        from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
         flex flex-col justify-end p-6`}
         data-id={id}
       >
         <h3 class="text-white text-2xl font-bold mb-2">
-          {title ? title : "Undercontruction"}
+          {title}
         </h3>
         <p class="text-gray-200 text-sm mb-4">
-          {description ? description : "Proyecto en contruccion"}
+          {description}
         </p>
 
         {/* Tech Stack */}
         <div class="flex gap-2 mb-4">
           {
             techstack ? (
-              techstack.map((tech: any) => {
-                return (
-                  <span class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
-                    {tech}
-                  </span>
-                );
-              })
+              techstack.map((tech: any) => (
+                <span class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
+                  {tech}
+                </span>
+              ))
             ) : (
               <span class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
                 Pronto...
@@ -85,30 +89,30 @@ const { id, title, image, description, techstack } = Astro.props;
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const btnInfo = document.querySelectorAll(".btn-info");
-    const projectCard = document.querySelectorAll(".project-card");
-    const projectImages = document.querySelectorAll(".project-image");
-    btnInfo.forEach((btn) => {
+    document.querySelectorAll(".btn-info").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const id = btn.getAttribute("data-id");
-        projectCard.forEach((card) => {
-          if (card.getAttribute("data-id") === id) {
-            card.classList.toggle("opacity-0");
-            card.classList.toggle("opacity-100");
-          } else {
-            card.classList.add("opacity-0");
-            card.classList.remove("opacity-100");
-          }
+        const id = (btn as HTMLElement).dataset.id;
+
+        document.querySelectorAll(".project-card").forEach((card) => {
+          card.classList.add("opacity-0");
+          card.classList.remove("opacity-100");
         });
-        projectImages.forEach((image) => {
-          if (image.getAttribute("data-id") === id) {
-            image.classList.toggle("grayscale");
-            image.classList.toggle("group-hover:grayscale-0");
-          } else {
-            image.classList.add("grayscale");
-            image.classList.remove("group-hover:grayscale-0");
-          }
+
+        document.querySelectorAll(".project-image").forEach((image) => {
+          image.classList.add("grayscale");
+          image.classList.remove("grayscale-0");
         });
+
+        const card = document.querySelector(`.project-card[data-id="${id}"]`);
+        const image = document.querySelector(`.project-image[data-id="${id}"]`);
+
+        if (card && image) {
+          card.classList.toggle("opacity-0");
+          card.classList.toggle("opacity-100");
+
+          image.classList.toggle("grayscale");
+          image.classList.toggle("grayscale-0");
+        }
       });
     });
   });
