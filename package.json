@@ -2,6 +2,7 @@
   "name": "portafolio_vk_2025",
   "type": "module",
   "version": "0.2.1",
+  "packageManager": "pnpm@10.6.1",
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
