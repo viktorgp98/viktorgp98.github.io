@@ -33,15 +33,15 @@ const techs = [
 ];
 ---
 
-<footer class="w-full bg-dark border-bd-color border-t-1 text-white">
+<footer class="w-full bg-dark border-t-1 border-light text-white">
   <div
-    class="container mx-auto items-center py-10 flex flex-col gap-10 md:gap-60 md:flex-row space-y-4 md:space-y-0 relative lg:p-20"
+    class="container mx-auto w-full items-center py-15 flex flex-col gap-7 lg:gap-40 xl:gap-60 lg:flex-row space-y-4 md:space-y-0 relative lg:p-20"
   >
-    <div class="footer-content">
+    <div class="footer-content w-auto">
       <p class="text-white">Desarrollado 💻 por Viktor Gonzalez P.</p>
     </div>
     <div
-      class="social-links items-center flex md:flex-row flex-row gap-4 md:gap-6 lg:gap-5 lg:w-auto"
+      class="social-links items-center flex flex-row gap-4 md:gap-x-6 lg:gap-x-5"
     >
       {
         socials.map((social) => {
@@ -64,7 +64,7 @@ const techs = [
         })
       }
     </div>
-    <div class="tech lg:flex flex-row gap-x-2 hidden w-auto">
+    <div class="tech lg:flex flex-row gap-x-2 hidden">
       <p>Construido con:</p>
       <div class="flex flex-row gap-3 items-center">
         {
