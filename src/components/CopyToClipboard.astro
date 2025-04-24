@@ -1,0 +1,88 @@
+---
+// src/components/CopyToClipboardClipboardJS.astro
+
+interface Props {
+  text: string;
+  buttonText?: string;
+  successText?: string;
+  className?: string;
+}
+
+const {
+  text,
+  buttonText = "Copy",
+  successText = "Copied!",
+  className = "",
+} = Astro.props;
+---
+
+<div class={`copy-to-clipboard-wrapper ${className}`}>
+  <div class="relative flex items-center">
+    <button
+      class="group cursor-pointer copy-button relative inline-flex items-center gap-1 py-1 text-gray-700 dark:text-gray-300 dark:hover:text-gray-100"
+      data-clipboard-text={text}
+      aria-label="Copy to clipboard"
+      data-clipboard-success-text={successText}
+    >
+      <pre class="p-4 rounded-lg overflow-x-auto">{text}</pre>
+      <div
+        id="label-copy"
+        class="group-hover:opacity-100 group-hover:text-primary absolute right-10 -top-2 opacity-0 text-xs"
+      >
+        <span
+          class="icon-[icon-park-twotone--copy]"
+          role="img"
+          aria-hidden="true"></span>
+        <span class="button-text">{buttonText}</span>
+      </div>
+    </button>
+  </div>
+</div>
+
+<style>
+  .copy-to-clipboard-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+  }
+</style>
+
+<script>
+  import Clipboard from "clipboard"; // Importa Clipboard.js en el script del cliente
+
+  function initClipboardJS() {
+    const clipboard = new Clipboard(".copy-button");
+
+    clipboard.on("success", (e) => {
+      const button = e.trigger;
+      const label = document.getElementById("label-copy");
+      const buttonTextElement = button.querySelector(".button-text");
+      const originalText = buttonTextElement?.textContent || "Copy";
+      const successMessage =
+        button.getAttribute("data-clipboard-success-text") || "Copied!";
+
+      label?.classList.toggle("opacity-0");
+      label?.classList.toggle("opacity-100");
+      label?.classList.add("dark:text-primary");
+
+      label?.classList.toggle("dark:text-dark");
+      if (buttonTextElement) buttonTextElement.textContent = successMessage;
+
+      setTimeout(() => {
+        label?.classList.add("opacity-0");
+        label?.classList.remove("opacity-100");
+        if (buttonTextElement) buttonTextElement.textContent = originalText;
+      }, 2000);
+
+      e.clearSelection();
+    });
+
+    clipboard.on("error", (e) => {
+      console.error("Error al copiar al portapapeles:", e);
+      // Puedes mostrar un mensaje de error al usuario aquí
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", initClipboardJS);
+  document.addEventListener("astro:page-load", initClipboardJS);
+</script>
