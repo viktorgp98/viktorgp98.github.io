@@ -1,21 +1,22 @@
 ---
 import FlowingMenu from "./FlowingMenu/FlowingMenu";
+import CopyToClipboard from "./CopyToClipboard.astro";
 
-const demoItems = [
+const contactLinks = [
   {
     link: "https://github.com/viktorgp98",
     text: "Github",
     image: "/images/github-dark.svg",
   },
   {
-    link: "https://www.linkedin.com/in/viktorgonzalezp/",
-    text: "LinkedIn",
-    image: "/images/linkedin.svg",
-  },
-  {
     link: "mailto:viktor.gonzalezp98@gmail.com",
     text: "Correo",
     image: "/images/mail.svg",
+  },
+  {
+    link: "https://www.linkedin.com/in/viktorgonzalezp/",
+    text: "LinkedIn",
+    image: "/images/linkedin.svg",
   },
 ];
 ---
@@ -31,22 +32,30 @@ const demoItems = [
       <h2
         class="section-title text-center uppercase text-dark dark:text-primary"
       >
-        Contáctame /
+        Contacto /
       </h2>
     </div>
     <div
       style={{ height: "600px" }}
       class="bg-primary-light dark:bg-dark-light w-full"
     >
-      <FlowingMenu items={demoItems} />
+      <FlowingMenu items={contactLinks} />
     </div>
-    <div class="flex flex-col items-center justify-center container mx-auto">
-      <p class="text-white text-center">Puedes contactarme en</p>
-      <a
+    <div
+      class="flex flex-col md:flex-row text-center items-center container mx-auto"
+    >
+      <p class="text-white text-nowrap">Puedes contactarme en</p>
+      <CopyToClipboard
+        text="viktor.gonzalezp98@gmail.com"
+        buttonText="Copiar"
+        successText="Copiado!"
+        className="text-dark dark:text-light font-bold text-center"
+      />
+      <!-- <a
         class="text-center italic dark:text-gray-400 cursor-pointer"
         href="mailto:viktor.gonzalezp98@gmail.com"
         ><title>Correo</title>viktor.gonzalezp98@gmail.com</a
-      >
+      > -->
     </div>
   </div>
 </section>
