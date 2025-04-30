@@ -1,5 +1,7 @@
 ---
 import HoverCard from "@/components/HoverCard.astro";
+
+import movie4all from "@/assets/images/movie4all-image.webp";
 ---
 
 <section
@@ -18,19 +20,22 @@ import HoverCard from "@/components/HoverCard.astro";
       <div class="col-span-2 row-span-4 bg-light shadow-lg">
         <HoverCard
           id="1"
-          title="Prueba 1"
-          image="https://picsum.photos/600/400?random=2"
+          title="Movies4All"
+          description="Aplicación de películas y series con carga dinámica de datos."
+          techstack={["ReactNative", "Tailwind", "AppWrite"]}
+          codeUrl="https://github.com/viktorgp98/movies-app"
+          image={movie4all}
         />
       </div>
       <div
         class="col-span-2 row-span-3 col-start-1 row-start-5 bg-light overflow-hidden shadow-lg"
       >
-        <HoverCard id="2" image="https://picsum.photos/600/400?random=1" />
+        <HoverCard id="2" image="https://picsum.photos/600/400?random=10" />
       </div>
       <div
         class="col-span-2 row-span-3 col-start-3 row-start-1 bg-light shadow-lg"
       >
-        <HoverCard id="3" image="https://picsum.photos/600/400?random=3" />
+        <HoverCard id="3" image="https://picsum.photos/600/400?random=6" />
       </div>
       <div
         class="col-span-2 row-span-4 col-start-3 row-start-4 bg-light shadow-lg"
