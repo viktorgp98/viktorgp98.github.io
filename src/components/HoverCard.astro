@@ -6,6 +6,8 @@ const {
   image,
   description = "Proyecto en construcción",
   techstack,
+  demoUrl,
+  codeUrl = "/#projects",
 } = Astro.props;
 ---
 
@@ -14,11 +16,13 @@ const {
     {/* Project Image */}
     <div class="relative overflow-hidden h-full w-full">
       <Image
-        src={image}
+        src={image ? image : "https://picsum.photos/600/400?random=1"}
         alt={`Imagen del proyecto ${title}`}
-        inferSize={true}
+        width={600}
+        height={400}
+        inferSize
         data-id={id}
-        class="project-image w-full h-full object-cover transform transition-transform duration-400 group-hover:scale-110 grayscale group-hover:grayscale-0"
+        class="project-image w-full h-full object-fit transform transition-transform duration-400 group-hover:scale-110 grayscale group-hover:grayscale-0"
       />
 
       {/* Mobile Info Button */}
@@ -63,7 +67,8 @@ const {
         {/* Links */}
         <div class="flex gap-4">
           <a
-            href="/"
+            href={codeUrl}
+            target="_blank"
             class="text-white hover:text-primary transition-colors duration-200 flex items-center gap-1"
           >
             <span
@@ -72,16 +77,22 @@ const {
               aria-hidden="true"></span>
             Código
           </a>
-          <a
-            href="/"
-            class="text-white hover:text-primary transition-colors duration-200 flex items-center gap-1"
-          >
-            <span
-              class="icon-[gg--external] w-7 h-7"
-              role="img"
-              aria-hidden="true"></span>
-            Demo
-          </a>
+          {
+            demoUrl && (
+              <a
+                href={demoUrl}
+                target="_blank"
+                class="text-white hover:text-primary transition-colors duration-200 flex items-center gap-1"
+              >
+                <span
+                  class="icon-[mdi--web] w-6 h-6"
+                  role="img"
+                  aria-hidden="true"
+                />
+                Demo
+              </a>
+            )
+          }
         </div>
       </div>
     </div>
@@ -89,29 +100,51 @@ const {
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    let currentlyActiveCardId: any = null;
+
     document.querySelectorAll(".btn-info").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const id = (btn as HTMLElement).dataset.id;
+        const idToActivate = (btn as HTMLElement).dataset.id;
+        const cardToActivate = document.querySelector(
+          `.project-card[data-id="${idToActivate}"]`
+        );
+        const imageToActivate = document.querySelector(
+          `.project-image[data-id="${idToActivate}"]`
+        );
 
-        document.querySelectorAll(".project-card").forEach((card) => {
-          card.classList.add("opacity-0");
-          card.classList.remove("opacity-100");
-        });
+        if (cardToActivate && imageToActivate) {
+          if (currentlyActiveCardId && currentlyActiveCardId !== idToActivate) {
+            const currentlyActiveCard = document.querySelector(
+              `.project-card[data-id="${currentlyActiveCardId}"]`
+            );
+            const currentlyActiveImage = document.querySelector(
+              `.project-image[data-id="${currentlyActiveCardId}"]`
+            );
 
-        document.querySelectorAll(".project-image").forEach((image) => {
-          image.classList.add("grayscale");
-          image.classList.remove("grayscale-0");
-        });
+            if (currentlyActiveCard && currentlyActiveImage) {
+              currentlyActiveCard.classList.add("opacity-0");
+              currentlyActiveCard.classList.remove("opacity-100");
+              currentlyActiveImage.classList.add("grayscale");
+              currentlyActiveImage.classList.remove("grayscale-0");
+            }
+          }
 
-        const card = document.querySelector(`.project-card[data-id="${id}"]`);
-        const image = document.querySelector(`.project-image[data-id="${id}"]`);
-
-        if (card && image) {
-          card.classList.toggle("opacity-0");
-          card.classList.toggle("opacity-100");
-
-          image.classList.toggle("grayscale");
-          image.classList.toggle("grayscale-0");
+          // Activar/desactivar el nuevo elemento
+          if (idToActivate === currentlyActiveCardId) {
+            // Si ya está activo, desactivarlo
+            cardToActivate.classList.add("opacity-0");
+            cardToActivate.classList.remove("opacity-100");
+            imageToActivate.classList.add("grayscale");
+            imageToActivate.classList.remove("grayscale-0");
+            currentlyActiveCardId = null;
+          } else {
+            // Si no está activo, activarlo
+            cardToActivate.classList.remove("opacity-0");
+            cardToActivate.classList.add("opacity-100");
+            imageToActivate.classList.remove("grayscale");
+            imageToActivate.classList.add("grayscale-0");
+            currentlyActiveCardId = idToActivate;
+          }
         }
       });
     });
