@@ -47,13 +47,13 @@ const techs = [
         socials.map((social) => {
           return (
             <a
-              class=" flex flex-row items-center justify-center"
+              class="group flex flex-row items-center justify-center"
               href={social.link}
               download={social.download}
               target="_blank"
             >
               <span
-                class={`${social.icon} text-primary w-auto h-6 px-5`}
+                class={`${social.icon} text-primary w-auto h-6 px-5 group-hover:scale-125 transition-all duration-200`}
                 role="img"
                 aria-hidden="true"
                 id={social.id}
@@ -71,7 +71,7 @@ const techs = [
           techs.map((tech) => {
             return (
               <span
-                class={`${tech.icon} w-6 h-6 text-primary`}
+                class={`${tech.icon} w-6 h-6 text-primary hover:scale-125 hover:bg-primary transition-all duration-200`}
                 role="img"
                 aria-hidden="true"
               />
