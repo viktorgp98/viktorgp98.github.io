@@ -12,16 +12,15 @@ import "lenis/dist/lenis.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width , initial-scale=1.0" />
     <title>{title}</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-      style="height: 16px; width: 16px;"
-    />
+    <link rel="shortcut icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta
       name="description"
-      content="Portafolio de Viktor Ariel González Pinto, Analista Programador con experiencia en desarrollo web.  Explora mis proyectos en  React, Python, Wordpress y más. 
-      Descubre mis habilidades en  React, Node, Bases de Datos y Gestión de Proyectos."
+      content="Portafolio de Viktor Ariel González Pinto, Analista Programador con experiencia en desarrollo web.  Explora mis proyectos en React, Python, Wordpress y más. 
+      Descubre mis habilidades en React, Node, Bases de Datos y Gestión de Proyectos."
     />
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -38,6 +37,10 @@ import "lenis/dist/lenis.css";
       // Whenever the user explicitly chooses to respect the OS preference
       localStorage.removeItem("theme");
     </script>
+    <meta
+      name="google-site-verification"
+      content="P-_QDHrYWbeyk6KwR7BIM6RE0uro5ukztUG51zKuf2w"
+    />
   </head>
   <body>
     <div
@@ -74,24 +77,9 @@ import "lenis/dist/lenis.css";
       gsap.registerPlugin(ScrollTrigger);
       ScrollTrigger.normalizeScroll(true); // enable
 
-      let sections = gsap.utils.toArray(".section");
       let tl, tl2;
+      /* Scroll animations */
 
-      /* sections.forEach((section: any) => {
-        tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: section,
-            start: "bottom bottom",
-            end: "bottom top",
-            scrub: true,
-            markers: false,
-          },
-        });
-        tl.to(section, {
-          yPercent: 100,
-          ease: "none",
-        });
-      }); */
       tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".secc-experience",
