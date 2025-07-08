@@ -147,25 +147,3 @@ html.lenis body {
   color: var(--color-primary) !important;
   transform: scale(1.05);
 }
-
-/* Color Theme Swatches in Hex */
-/* .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-1-hex { color: #F26BB5; }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-2-hex { color: #D971AA; }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-3-hex { color: #191726; }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-4-hex { color: #5D5F8C; }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-5-hex { color: #3C4959; } */
-
-/* Color Theme Swatches in RGBA */
-/* .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-1-rgba { color: rgba(242, 106, 181, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-2-rgba { color: rgba(216, 112, 169, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-3-rgba { color: rgba(24, 22, 38, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-4-rgba { color: rgba(92, 94, 140, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-5-rgba { color: rgba(59, 72, 89, 1); } */
-
-/* Color Theme Swatches in HSLA */
-/* .Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-1-hsla { color: hsla(326, 84, 68, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-2-hsla { color: hsla(326, 57, 64, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-3-hsla { color: hsla(247, 25, 12, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-4-hsla { color: hsla(236, 20, 45, 1); }
-.Girl-portrait.-beautiful-vaporwave-beauty-porter-style-girls-gothic-fashion-style-5-hsla { color: hsla(213, 19, 29, 1); } */
-//text-wrap:balance;
