@@ -4,6 +4,7 @@ const { title = "Viktor Gonzalez P |  FullStack Web Developer Junior" } =
   Astro.props;
 import Footer from "@/components/Footer.astro";
 import "lenis/dist/lenis.css";
+import ScrollToTopButton from "@/components/ScrollToTop";
 ---
 
 <!doctype html>
@@ -58,6 +59,7 @@ import "lenis/dist/lenis.css";
       <slot />
     </main>
     <Footer />
+    <ScrollToTopButton client:load />
 
     <script>
       import Lenis from "lenis";
