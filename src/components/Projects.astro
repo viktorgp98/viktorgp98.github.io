@@ -2,11 +2,12 @@
 import HoverCard from "@/components/HoverCard.astro";
 
 import movie4all from "@/assets/images/movie4all-image.webp";
+import contaxpyme from "@/assets/images/contaxpyme.webp";
 ---
 
 <section
   id="projects"
-  class="section secc-projects min-h-screen py-10 bg-primary dark:bg-dark relative"
+  class="section secc-projects min-h-screen pt-10 pb-35 bg-primary dark:bg-dark relative"
 >
   <div class="container mx-auto py-7 px-5 md:p-10 space-y-7">
     <div class="section-title pb-7">
@@ -30,7 +31,14 @@ import movie4all from "@/assets/images/movie4all-image.webp";
       <div
         class="col-span-2 row-span-3 col-start-1 row-start-5 bg-light overflow-hidden shadow-lg"
       >
-        <HoverCard id="2" image="https://picsum.photos/600/400?random=10" />
+        <HoverCard
+          id="2"
+          title="Contaxpyme.cl"
+          description="Landing Page Corporativa para la Empresa Contaxpyme."
+          techstack={["AstroJs", "Tailwind", "PHP"]}
+          demoUrl="https://contaxpyme.cl"
+          image={contaxpyme}
+        />
       </div>
       <div
         class="col-span-2 row-span-3 col-start-3 row-start-1 bg-light shadow-lg"
