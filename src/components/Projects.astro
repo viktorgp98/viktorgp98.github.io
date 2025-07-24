@@ -1,8 +1,9 @@
 ---
 import HoverCard from "@/components/HoverCard.astro";
 
-import movie4all from "@/assets/images/movie4all-image.webp";
+import movie4all from "../assets/images/movie4all-image.webp";
 import contaxpyme from "@/assets/images/contaxpyme.webp";
+import socialapp from "@/assets/images/socialapp.webp";
 ---
 
 <section
@@ -43,7 +44,14 @@ import contaxpyme from "@/assets/images/contaxpyme.webp";
       <div
         class="col-span-2 row-span-3 col-start-3 row-start-1 bg-light shadow-lg"
       >
-        <HoverCard id="3" image="https://picsum.photos/600/400?random=6" />
+        <HoverCard
+          id="3"
+          title="HackerStuff/social-app"
+          description="Aplicación tipo red social, con interacciones en tiempo real."
+          techstack={["Expo", "Clerk", "Convex", "Typescript"]}
+          codeUrl="https://github.com/viktorgp98/social-app"
+          image={socialapp}
+        />
       </div>
       <div
         class="col-span-2 row-span-4 col-start-3 row-start-4 bg-light shadow-lg"
