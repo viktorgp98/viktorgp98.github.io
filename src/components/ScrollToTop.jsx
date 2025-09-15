@@ -62,7 +62,7 @@ const ScrollToTopButton = () => {
           className="fixed cursor-pointer right-8 bottom-8 z-50 flex h-12 w-12 items-center justify-center rounded-full border-1 border-white bg-dark-light text-white shadow-lg transition-colors duration-300 hover:bg-primary"
           aria-label="Volver al inicio"
         >
-          <span class="icon-[icon-park-outline--up]"></span>
+          <span className="icon-[icon-park-outline--up]"></span>
         </button>
       )}
     </>

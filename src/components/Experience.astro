@@ -2,11 +2,14 @@
 import { EXPERIENCES } from "@/consts/experiences";
 import { Image } from "astro:assets";
 const colorVariants: any = {
+  red:"border-[#e62922]",
   green: "border-[#5dc252]",
   blue: "border-[#1991da]",
   white: "border-white",
 };
 const icons: any = {
+  svelte:"icon-[lineicons--svelte]",
+  laravel:"icon-[meteor-icons--laravel]",
   mssql: "icon-[devicon--microsoftsqlserver-wordmark]",
   react: "icon-[material-icon-theme--react]",
   nodejs: "icon-[material-icon-theme--nodejs]",
@@ -16,6 +19,8 @@ const icons: any = {
   css: "icon-[material-icon-theme--css]",
   bootstrap: "icon-[logos--bootstrap]",
   expressjs: "icon-[lineicons--expressjs]",
+  tailwind:"icon-[ri--tailwind-css-fill]",
+   php: "icon-[fa6-brands--php]",
 };
 ---
 
@@ -64,7 +69,7 @@ const icons: any = {
               </div>
               <div class="flex flex-row items-center gap-2 text-gray-700 dark:text-gray-300 ">
                 <span class="icon-[uiw--date]" role="img" aria-hidden="true" />
-                <p class="">{`${experience.start} - ${experience.end ?? "Actualidad"}`}</p>
+                <p class="">{`${experience.start} - ${experience.end ?? "ACTUALIDAD"}`}</p>
               </div>
               <p class="mt-2 dark:text-light">{experience.description}</p>
               <div class="flex flex-row flex-wrap gap-2 gap-y-2 pt-5 ">

@@ -1,5 +1,17 @@
 export const EXPERIENCES = [
   {
+    id: "muni_rgua",
+    color: "red",
+    company: "Ilustre Municipalidad de Rancagua",
+    location: "Rancagua, Chile",
+    title: "Desarrollador Frontend",
+    image: "/images/logos/muni-rancagua-logo.webp",
+    start: "Agosto 2025",
+    description:
+      "Encargado del desarrollo de diseños web responsivos y accesibles. Utilizando distintas tecnologías como Svelte, Laravel, Tailwind, entre otras.",
+    techStack:[{name:'tailwind'},{name:'php'},{name:'javascript'},{name:'laravel'},{name:'svelte'}],
+  },
+  {
     id: "altue",
     color: "green",
     company: "Semillas Altue",
