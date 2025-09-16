@@ -7,6 +7,10 @@ export const TECHS = [
         name: "React.js",
       },
       {
+        id: "svelte",
+        name: "Svelte",
+      },
+      {
         id: "native",
         name: "React Native",
       },
@@ -27,6 +31,11 @@ export const TECHS = [
   {
     name: "backend",
     techs: [
+
+      {
+        id: "laravel",
+        name: "Laravel",
+      },
       {
         id: "javascript",
         name: "JavaScript",
