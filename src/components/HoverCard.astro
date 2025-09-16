@@ -11,7 +11,7 @@ const {
 } = Astro.props;
 ---
 
-<div class="bg-gray-100 flex h-full w-full client:only">
+<div class="bg-gray-100 flex h-full w-full client:only" tabindex="0">
   <div class="relative group h-full w-full">
     {/* Project Image */}
     <div class="relative overflow-hidden h-full w-full">
@@ -48,21 +48,22 @@ const {
         </p>
 
         {/* Tech Stack */}
-        <div class="flex gap-2 mb-4">
+        <p class="sr-only">Tecnologías utilizadas</p>
+        <ul class="flex gap-2 mb-4">
           {
             techstack ? (
               techstack.map((tech: any) => (
-                <span class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
+                <li class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
                   {tech}
-                </span>
+                </li>
               ))
             ) : (
-              <span class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
+              <li class="px-3 py-1 bg-white/20 rounded-full text-white text-xs">
                 Pronto...
-              </span>
+              </li>
             )
           }
-        </div>
+        </ul>
 
         {/* Links */}
         <div class="flex gap-4">
@@ -71,7 +72,7 @@ const {
               <a
                 href={codeUrl}
                 target="_blank"
-                class="text-white hover:text-primary transition-colors duration-200 flex items-center gap-1"
+                class="text-white hover:text-primary transition-colors duration-200 flex items-center gap-1" aria-label=`Abrir en nueva pestaña código de ${title}`
               >
                 <span
                   class="icon-[mdi--github] w-6 h-6"
@@ -88,6 +89,7 @@ const {
                 href={demoUrl}
                 target="_blank"
                 class="text-white hover:text-primary transition-colors duration-200 flex items-center gap-1"
+                aria-label=`Abrir en nueva pestaña demo de ${title}`
               >
                 <span
                   class="icon-[mdi--web] w-6 h-6"

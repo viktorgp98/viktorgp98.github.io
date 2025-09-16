@@ -4,10 +4,13 @@ import { Image } from "astro:assets";
 
 <section
   id="about"
+  aria-labelledby="about-title"
   class="section secc-about bg-primary-light dark:bg-dark-light min-h-screen py-10 relative"
+  tabindex="0"
 >
   <div class="container mx-auto py-7 px-5 lg:p-10 flex flex-col gap-8">
     <h2
+      id="about-title"
       class="section-title uppercase text-center xl:text-left dark:text-light pb-7"
     >
       Sobre mi /
@@ -29,6 +32,7 @@ import { Image } from "astro:assets";
       <div
         class="content rounded-xl p-5 flex flex-col items-center xl:items-start
          lg:pt-20 text-dark dark:text-light xl:w-1/2 lg:p-15 space-y-7"
+         tabindex="0"
       >
         <p>
           Soy Viktor González Pinto (sí, con K! 🤓), un Desarrollador Fullstack
@@ -58,6 +62,7 @@ import { Image } from "astro:assets";
             href="https://www.linkedin.com/in/viktorgonzalezp/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Abrir en nueva pestaña perfil de LinkedIn de Viktor Gonzalez"
             class="group flex items-center gap-2 px-4 py-2 mx-auto lg:w-auto bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
           >
             <span
@@ -67,6 +72,7 @@ import { Image } from "astro:assets";
           </a>
           <a
             href="/documents/CV-ViktorGonzalez-2025.pdf"
+            aria-label="Descargar CV de Viktor Gonzalez"
             download="cv_viktorgonzalez.pdf"
             target="_blank"
             rel="noopener noreferrer"

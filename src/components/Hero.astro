@@ -39,16 +39,23 @@ const pretitle = `Desarrollador { FullStack }`;
     >
       <!-- available -->
       <div
+        tabindex="0"
         class="available absolute
         right-8 -top-15 flex-row flex justify-end items-center gap-3 text-sm text-zinc-400"
       >
-        <div class="size-1.5 rounded-full bg-green-400 z-10 animate-pulse">
-        </div>
-        <span class="text-xs">Disponible para trabajar</span>
+        <div class="size-2 rounded-full bg-green-400 z-10 animate-pulse"></div>
+        <span  class="text-xs">Disponible para trabajar</span>
       </div>
       <!-- titles -->
-      <div class="flex flex-col gap-4 md:gap-5 items-start">
-        <h2 class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)]">
+      <section
+        aria-labelledby="titlePrincipal"
+        tabindex="0"
+        class="flex flex-col gap-4 md:gap-5 items-start"
+      >
+        <h2
+          aria-label="Desarrollador Fullstack"
+          class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)]"
+        >
           {pretitle}
         </h2>
         <GradientText
@@ -56,23 +63,32 @@ const pretitle = `Desarrollador { FullStack }`;
           animationSpeed={8}
           showBorder={false}
         >
-          <h1 class="text-[clamp(2rem,calc(7vw+1rem),5rem)]/none font-bold">
+          <h1
+            id="titlePrincipal"
+            class="text-[clamp(2rem,calc(7vw+1rem),5rem)]/none font-bold"
+          >
             VIKTOR GONZÁLEZ PINTO
           </h1>
         </GradientText>
 
-        <h3 class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)] italic">
-          +1 año de experiencia. <span class="text-primary"
-            >Analista Programador
+        <p class="text-[clamp(1rem, calc(4vw + .5rem), 4rem)] italic">
+          <span class="sr-only"
+            >Más de un año de experiencia como Analista Programador, de Chile.
           </span>
-          de Chile &nbsp;<span
-            class="icon-[openmoji--flag-chile]"
-            role="img"
+          <span>
+
+            +1 año de experiencia.
+            <span class="text-primary">Analista Programador</span>
+            de Chile
+            <span
+            class="icon-[openmoji--flag-chile] "
+            role="none"
             aria-hidden="true"></span>
-          <br />
-          Apasionado por la innovación web
-        </h3>
-      </div>
+            <br />
+            Apasionado por la innovación web
+          </span>
+        </p>
+      </section>
       <!-- enlaces  -->
       <div
         class="call-to-action flex flex-col md:flex-row gap-10 items-center container mx-auto"
@@ -81,15 +97,14 @@ const pretitle = `Desarrollador { FullStack }`;
           class="buttons flex items-center md:justify-start gap-4 md:gap-x-4"
         >
           <!-- projects -->
-          <HoverButton>
-            <a
-              class="w-full h-full relative"
-              href="#projects"
-              onclick="lenis.scrollTo('#projects')"
-            >
-              Ver proyectos
-            </a>
-          </HoverButton>
+          <a
+            aria-label="Ver todos los proyectos"
+            class="w-full h-full relative"
+            href="#projects"
+            onclick="lenis.scrollTo('#projects')"
+          >
+            <HoverButton> Ver proyectos </HoverButton>
+          </a>
           <!-- contact -->
           <a
             href="#contact"

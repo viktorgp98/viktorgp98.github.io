@@ -11,7 +11,7 @@ interface Props {
 const {
   text,
   buttonText = "Copy",
-  successText = "Copied!",
+  successText = "Copiado!",
   className = "",
 } = Astro.props;
 ---
@@ -21,7 +21,7 @@ const {
     <button
       class="group cursor-pointer copy-button relative items-center gap-1 py-1 text-gray-700 dark:text-gray-300 dark:hover:text-gray-100"
       data-clipboard-text={text}
-      aria-label="Copy to clipboard"
+      aria-label="Copiar correo al portapapeles"
       data-clipboard-success-text={successText}
     >
       <pre class="p-4 rounded-lg overflow-x-auto">{text}</pre>
@@ -57,9 +57,9 @@ const {
       const button = e.trigger;
       const label = document.getElementById("label-copy");
       const buttonTextElement = button.querySelector(".button-text");
-      const originalText = buttonTextElement?.textContent || "Copy";
+      const originalText = buttonTextElement?.textContent || "Copiar";
       const successMessage =
-        button.getAttribute("data-clipboard-success-text") || "Copied!";
+        button.getAttribute("data-clipboard-success-text") || "Copiado!";
 
       label?.classList.toggle("opacity-0");
       label?.classList.toggle("opacity-100");
