@@ -26,25 +26,29 @@ const icons: any = {
 
 <section
   id="experience"
+  aria-labelledby="exp-title"
+  
   class="section relative secc-experience bg-primary dark:bg-dark min-h-screen py-10 cursor-default"
 >
   <div class="container mx-auto py-7 px-5 flex flex-col gap-8 md:p-10">
     <h2
+    tabindex="0"
+      id="exp-title"
       class="section-title text-dark dark:text-primary uppercase text-center md:text-left pb-7"
     >
-      Experiencia /
+      Experiencia <span aria-hidden="true">/</span>
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+    <ul class="grid grid-cols-1 md:grid-cols-2 gap-7">
       {
         EXPERIENCES.map((experience, i) => (
-          <div class="experience-card bg-light dark:bg-dark-light shadow-lg p-5 rounded-lg relative">
+          <li class="experience-card bg-light dark:bg-dark-light shadow-lg p-5 rounded-lg relative" tabindex="0">
             <div
               class={`experience-image shadow-xl bg-light absolute inset-y-2 -left-3 rounded-full overflow-hidden border-3 ${colorVariants[experience.color]} w-12 h-12`}
             >
               <Image
                 src={experience.image}
-                alt={experience.id}
+                alt={`Imagen de ${experience.company}`}
                 width={60}
                 height={60}
                 class="w-full h-full object-cover "
@@ -72,22 +76,23 @@ const icons: any = {
                 <p class="">{`${experience.start} - ${experience.end ?? "ACTUALIDAD"}`}</p>
               </div>
               <p class="mt-2 dark:text-light">{experience.description}</p>
-              <div class="flex flex-row flex-wrap gap-2 gap-y-2 pt-5 ">
+              <p class="sr-only">Tecnologías utilizadas</p>
+              <ul  class="flex flex-row flex-wrap gap-2 gap-y-2 pt-5 ">
                 {experience.techStack.map((tech: any) => (
-                  <div class="flex flex-row items-center gap-1 border-1 p-1 w-auto shadow-sm text-gray-700 dark:text-gray-300 rounded-md ">
+                  <li class="flex flex-row items-center gap-1 border-1 p-1 w-auto shadow-sm text-gray-700 dark:text-gray-300 rounded-md ">
                     <span
                       class={`${icons[tech.name]} text-md`}
                       role="img"
                       aria-hidden="true"
                     />
                     <p class="">{tech.name}</p>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
-          </div>
+          </li>
         ))
       }
-    </div>
+    </ul>
   </div>
 </section>

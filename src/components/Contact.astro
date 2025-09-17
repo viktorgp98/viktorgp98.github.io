@@ -7,29 +7,34 @@ const contactLinks = [
     link: "https://github.com/viktorgp98",
     text: "Github",
     image: "/images/github-dark.svg",
+    aria:"Abrir en nueva pestaña perfil de Github de Viktor Gonzalez"
   },
   {
     link: "mailto:viktor.gonzalezp98@gmail.com",
     text: "Correo",
     image: "/images/mail.svg",
+    aria:"Enviar un correo a Viktor Gonzalez"
   },
   {
     link: "https://www.linkedin.com/in/viktorgonzalezp/",
     text: "LinkedIn",
     image: "/images/linkedin.svg",
+    aria:"Abrir en nueva pestaña perfil de LinkedIn de Viktor Gonzalez"
   },
 ];
 ---
 
 <section
   id="contact"
+  aria-labelledby="contact-title"
   class="section secc-contact bg-primary dark:bg-dark min-h-screen py-auto relative"
+  tabindex="0"
 >
   <div
     class="md:w-auto md:mx-auto md:justify-items-center flex flex-col gap-10 py-7"
   >
     <div class="flex flex-col justify-center container mx-auto p-5 md:p-10">
-      <h2
+      <h2 id="contact-title"
         class="section-title text-center uppercase text-dark dark:text-primary pb-7"
       >
         Contacto /
@@ -43,8 +48,10 @@ const contactLinks = [
     </div>
     <div
       class="flex flex-col md:flex-row items-center justify-center container mx-auto w-auto py-7"
+      tabindex="0"
     >
-      <p class="text-white text-nowrap">Puedes contactarme en</p>
+      <p class="sr-only">Puedes contactarme en: viktor.gonzalezp98@gmail.com</p>
+      <p aria-hidden="true" class="text-white text-nowrap">Puedes contactarme en</p>
       <CopyToClipboard
         text="viktor.gonzalezp98@gmail.com"
         buttonText="Copiar"

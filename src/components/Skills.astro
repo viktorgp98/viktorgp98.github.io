@@ -34,11 +34,14 @@ const icons: any = {
 
 <section
   id="skills"
+  aria-labelledby="skills-title"
+  tabindex="0"
   class="section secc-skills bg-primary-light dark:bg-dark-light min-h-auto relative"
 >
   <div
     class="container mx-auto px-5 md:p-10 md:py-20 z-20 py-15 flex flex-col gap-8"
   >
+  <p id="skills-title" class="sr-only">Habilidades y Tecnologías</p>
     <h2
       class="section-title uppercase dark:text-light text-center md:text-left cursor-pointer"
     >
@@ -49,8 +52,8 @@ const icons: any = {
     >
       {
         TECHS.map((category) => (
-          <div class="flex flex-col  gap-1">
-            <h3 class="  capitalize dark:text-primary font-bold">
+          <section class="flex flex-col  gap-1" tabindex="0">
+            <h3 class="capitalize dark:text-primary font-bold">
               {category.name}:
             </h3>
             <div class="flex flex-row flex-wrap gap-2 py-2">
@@ -72,7 +75,7 @@ const icons: any = {
                 );
               })}
             </div>
-          </div>
+          </section>
         ))
       }
     </div>

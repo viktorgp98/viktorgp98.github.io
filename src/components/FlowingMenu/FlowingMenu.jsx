@@ -15,7 +15,7 @@ function FlowingMenu({ items }) {
   );
 }
 
-function MenuItem({ link, text, image }) {
+function MenuItem({ link, text, image,aria }) {
   const itemRef = React.useRef(null);
   const marqueeRef = React.useRef(null);
   const marqueeInnerRef = React.useRef(null);
@@ -76,6 +76,7 @@ function MenuItem({ link, text, image }) {
   return (
     <div className="menu__item" ref={itemRef}>
       <a
+        aria-label={aria}
         className="menu__item-link text-dark-light  dark:text-light"
         href={link}
         onMouseEnter={handleMouseEnter}

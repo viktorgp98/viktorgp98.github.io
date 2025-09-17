@@ -21,7 +21,7 @@ export const EXPERIENCES = [
     start: "Nov 2024",
     end: "Mar 2025",
     description:
-      "Encargado de desarrollo de más de 10 módulos para sistema de proceso de tratado de semillas y hortazilas. Utilizando React(Frontend), NodeJS(Backend) y MSSQL(Base de datos).",
+      "Encargado de desarrollo de más de 10 módulos para sistema de proceso de tratado de semillas y hortalizas. Utilizando React(Frontend), NodeJS(Backend) y MSSQL(Base de datos).",
     techStack:[{name:'react'},{name:'nodejs'},{name:'mssql'},{name:'expressjs'},],
   },
   {
