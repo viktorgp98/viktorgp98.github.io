@@ -57,6 +57,7 @@ import ScrollToTopButton from "@/components/ScrollToTop";
 
     <main>
       <slot />
+
     </main>
     <Footer />
     <ScrollToTopButton client:load />
@@ -124,9 +125,11 @@ import ScrollToTopButton from "@/components/ScrollToTop";
         console.log(`Theme changed to ${newTheme}`);
       });
     </script>
+    
+    
   </body>
-
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.2.3/dist/lenis.css" />
+  
   <style>
     html,
     body {
